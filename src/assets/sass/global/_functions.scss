@@ -1,0 +1,23 @@
+@use 'sass:math';  // mathモジュールを最初にインポート
+
+@function rem($px) {
+    @return math.div($px, 16) * 1rem;  // `px` を `rem` に変換
+  }
+  
+  @function rclamp($min, $max, $minViewport, $maxViewport) {
+    $vwScale: math.div(($max - $min), ($maxViewport - $minViewport));  // 修正
+    $baseOffset: $min - $minViewport * $vwScale;
+  
+    // clamp() が壊れないよう min/max 順を正す
+    $minValue: min($min, $max);
+    $maxValue: max($min, $max);
+  
+    $minRem: math.div($minValue, 16);  // 修正
+    $maxRem: math.div($maxValue, 16);  // 修正
+    $baseOffsetRem: math.div($baseOffset, 16);  // 修正
+    $vwScaleRem: $vwScale * 100;
+  
+    @return clamp(#{$minRem}rem, #{$baseOffsetRem}rem + #{$vwScaleRem}vw, #{$maxRem}rem);
+  }
+  
+

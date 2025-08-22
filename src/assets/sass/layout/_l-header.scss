@@ -1,0 +1,52 @@
+@use "../global" as *;
+
+.l-header__inner {
+    inline-size: min(calc(1326px + 20px * 2), 100%);
+    padding-inline: 20px;
+    margin-inline: auto;
+    padding-block-start: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.l-header__logo {
+    inline-size: 153px;
+    block-size: 69px;
+    display: flex;
+    align-items: center;
+    padding: 13px 37px;
+    border: 1px solid $color-bk;
+}
+
+.l-header__nav {
+    display: none;
+
+    @include mq(lg) {
+      display: block;
+    }
+}
+
+.l-header__list {
+    display: flex;
+}
+
+.l-header__item {
+
+}
+
+.l-header__link {
+    display: block;
+    padding: 17px 30px 18px 30px;
+    border: 1px solid $color-bk;
+    font-size: rclamp(12, 15, 375, 1366);
+     &:last-of-type {
+    padding: 19px 30px;
+  }
+}
+
+.l-header__link-text {
+
+}
+

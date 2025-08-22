@@ -1,0 +1,208 @@
+@use "../global" as *;
+
+.c-drawer-icon {
+    position: fixed;
+    z-index: 102;
+    top: 16px;
+    right: 24px;
+    width: 24px;
+    height: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include mq(lg) {
+        display: none;
+    }
+}
+
+
+
+.c-drawer-icon__bar {
+    width: 100%;
+    height: 2px;
+    background: #205295;
+    transition: all 0.5s ease;
+    position: relative;
+    z-index: 1;
+}
+//メニューが開いている時 ========
+.c-drawer-icon.js-show {
+    .c-drawer-icon__bar:nth-of-type(1) {
+      rotate: 45deg;
+      translate: 0 4px;
+    }
+
+    .c-drawer-icon__bar:nth-of-type(2) {
+      rotate: -45deg;
+      translate: 0 -4px;
+    }
+
+    &::after {
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        translate: -50%;
+        content: "CLOSE";
+        color: #0A2647;
+        font-family: $font-main;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 150%; /* 18px */
+    }
+
+    // .c-drawer-icon__text {
+    //     display: block;
+    //     position: relative;
+    //     top: 0;
+    //     right: 0;
+    //     z-index: 200;
+    // }
+}
+
+//   .c-drawer-icon__text {
+//     color: #0A2647;
+//     font-size: 12px;
+//     font-weight: 500;
+//     line-height: 150%; /* 18px */
+//     display: none;
+//   }
+
+
+
+.c-drawer-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 100;
+}
+.c-drawer-overlay.js-show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
+
+.c-drawer {
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    right: 0;
+    width: 235px;
+    height: 100vh;
+    height: 100svh;
+    background: $color-wt;
+    overflow-y: scroll;
+    translate: 101%;
+    transition: translate 0.5s ease;
+  
+    &.js-show {
+      translate: 0;
+    }
+}
+
+.c-drawer__content {
+    width: 100%;
+    padding: 70px 38px 20px 38px;
+}
+
+.c-drawer__list {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.c-drawer__item {
+}
+
+.c-drawer__link {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #205295;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 150%; /* 21px */
+    transition: all 0.3s ease;
+    @media (any-hover: hover) {
+        &:hover {
+            opacity: .6;
+        }
+    }
+}
+
+.c-drawer__text {
+
+}
+
+.c-drawer__text {
+    color: #000;
+    font-family: "Zen Kaku Gothic New";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+}
+
+.c-drawer__button {
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    align-items: center;
+    width: fit-content;
+    margin-top: 32px;
+    padding-inline: 10px;
+    padding-block: 9px 5px;
+    color: $color-wt;
+    font-family: "Saira SemiCondensed";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    letter-spacing: 1.4px;
+    background: #0B294C;
+    box-shadow: 0px 4px 4px 0px rgba(11, 41, 76, 0.30);
+    position: relative;
+    transition: all 0.3s ease;
+
+    @media (any-hover: hover) {
+        &:hover {
+          color:#0B294C;
+          background: #fff;
+          svg {
+            color: #2c74b3;
+          }
+          span {
+              color: #0B294C;
+          }
+  
+          &::after {
+            background: url(../img/button-entry-bk.svg) no-repeat center center / cover;
+          }
+        }
+      }
+
+    &::after {
+      content: '';
+      position: absolute;
+      background: url(../img/drawer-entry_button.svg) no-repeat center center / cover;
+      right: 3px;
+      bottom: 3px;
+      width: 10px;
+      height: 10px;
+      transition: all 0.3s ease;
+    }
+    span {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 150%; /* 27px */
+        font-family: $font-main;
+        transition: all 0.3s ease;
+    }
+}
+

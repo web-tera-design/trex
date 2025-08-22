@@ -1,0 +1,34 @@
+@use "../global" as *;
+
+.c-button {
+    display: inline-block;
+    position: relative;
+        &::after {
+      position: absolute;
+      content: "";
+      top: 8px;
+      left: 8px;
+      width: 100%;
+      height: 100%;
+      background-color: $color-rd;
+      z-index: -1;
+    }
+}
+
+.c-button__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.c-button__heading {
+
+}
+
+.c-button__text {
+
+}
+
+.c-button__subtext {
+
+}
+

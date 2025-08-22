@@ -1,0 +1,87 @@
+@use '../global' as *;
+
+/* ============================
+   ✅ シンプルなリセットCSS
+   ============================ */
+
+/* すべての要素に対してボックスサイズとマージン・パディングをリセット */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 明示的にスタイルが入りがちな要素だけピンポイントで個別指定する */
+p,
+figure,
+figcaption,
+fieldset,
+legend,
+blockquote {
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 見出しタグのデフォルトのマージンやフォントのリセット */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+/* リストのデフォルトスタイルのリセット */
+ul,
+ol {
+  list-style: none;
+  list-style-type: none;
+}
+
+/* 画像のリセット */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* リンクのデフォルトスタイルのリセット */
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* フォーム要素のリセット */
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  border: none;
+  background: transparent;
+}
+
+/* フォーカス時のアウトラインのリセット */
+:focus {
+  outline: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}

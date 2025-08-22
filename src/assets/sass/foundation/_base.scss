@@ -1,0 +1,40 @@
+@use '../global' as *;
+
+body {
+    font-family: $font-main;
+    color: $color-bk;
+    background-color: $color-wt;
+    line-height: 150%;
+    letter-spacing: 1px;
+  }
+
+  body.is-fixed {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  body.loading .l-header {
+    display: none;
+}
+
+html, body { 
+  height: 100%; 
+}
+
+.l-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.l-main {
+  flex: 1 0 auto; 
+}
+
+/* 共通のフォーカススタイル */
+a:focus, a:focus-visible,
+button:focus, button:focus-visible {
+  transition: transform 0.3s, color 0.3s ease;
+  transform: scale(1.05);
+  color: $color-rd;
+}
