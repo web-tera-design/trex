@@ -31,10 +31,3 @@ html, body {
   flex: 1 0 auto; 
 }
 
-/* 共通のフォーカススタイル */
-a:focus, a:focus-visible,
-button:focus, button:focus-visible {
-  transition: transform 0.3s, color 0.3s ease;
-  transform: scale(1.05);
-  color: $color-rd;
-}

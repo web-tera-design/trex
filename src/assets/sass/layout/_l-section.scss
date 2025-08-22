@@ -1,5 +1,4 @@
 @use "../global" as *;
-@use '../global' as *;
 
 .l-section__inner--wide {
     inline-size: min(calc(1400px + 20px * 2), 100%);

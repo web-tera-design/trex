@@ -1,23 +1,83 @@
 @use "../global" as *;
 
+.l-header {
+    padding-top: 20px;
+}
+
 .l-header__inner {
-    inline-size: min(calc(1326px + 20px * 2), 100%);
+    inline-size: min(1366px, 100%);
     padding-inline: 20px;
     margin-inline: auto;
-    padding-block-start: 20px;
+    border-block: 1px solid $color-bk;
+}
+
+.l-header__top-space {
+    // border-block: 1px solid $color-bk;
+    width: 100vw;
+    display: grid;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: $color-bk;
+        top: 20px;
+        left: 0;
+    }
+}
+
+.l-header__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+    border-inline: 1px solid $color-bk;
+    position: relative;
 
+    &::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 20px;
+    background-color: $color-bk;
+    right: -1px;
+    top: -20px;
+    }
+    @include mq(lg) {
+      border-inline-end: 0;
+      &::after {
+        width: 0;
+      }
+    }
+}
 
 .l-header__logo {
     inline-size: 153px;
-    block-size: 69px;
+    block-size: 64px;
     display: flex;
     align-items: center;
     padding: 13px 37px;
-    border: 1px solid $color-bk;
+    border-inline-end: 1px solid $color-bk;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 20px;
+        background-color: $color-bk;
+        left: -1px;
+        top: -20px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 20px;
+        background-color: $color-bk;
+        right: -1px;
+        top: -20px;
+    }
 }
 
 .l-header__nav {
@@ -33,17 +93,42 @@
 }
 
 .l-header__item {
-
 }
 
+.l-header__list li:last-child .l-header__link {
+  border-right: 1px solid #000; /* 好みの色・太さに調整してください */
+}
+
+
 .l-header__link {
+    block-size: 64px;
     display: block;
     padding: 17px 30px 18px 30px;
-    border: 1px solid $color-bk;
+    border-inline-start: 1px solid $color-bk;
     font-size: rclamp(12, 15, 375, 1366);
-     &:last-of-type {
-    padding: 19px 30px;
-  }
+    position: relative;
+
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 20px;
+        background-color: $color-bk;
+        left: -1px;
+        top: -20px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 20px;
+        background-color: $color-bk;
+        right: -1px;
+        top: -20px;
+    }
 }
 
 .l-header__link-text {

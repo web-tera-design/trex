@@ -1,0 +1,94 @@
+@use "../global" as *;
+
+.p-mv {
+
+}
+
+.p-mv__inner {
+    @include mq(lg) {
+        inline-size: min(1366px, 100%);
+        padding-inline: 20px;
+        margin-inline: auto;
+    }
+}
+
+.l-section__inner--narrow {
+
+}
+
+.p-mv__cta {
+
+}
+
+.p-mv__content-wrapper {
+
+}
+
+.p-mv__content {
+
+}
+
+.p-mv__heading {
+
+}
+
+.p-mv__subtitle {
+
+}
+
+.p-mv__description {
+
+}
+
+.p-mv__content-message {
+
+}
+
+.p-mv__results {
+
+}
+
+.p-mv__results__inner {
+
+}
+
+.p-mv__results__heading {
+
+}
+
+.p-mv__results__title {
+
+}
+
+.p-mv__results-subtitle {
+
+}
+
+.p-mv__results__items {
+
+}
+
+.p-mv__results__item {
+
+}
+
+.p-mv__results__item-heading {
+
+}
+
+.p-mv__results__item-desc-wrapper {
+
+}
+
+.p-mv__results__item-description {
+
+}
+
+.p-mv__results__item-sub {
+
+}
+
+.p-mv__results__item-third {
+
+}
+
