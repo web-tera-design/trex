@@ -199,6 +199,10 @@ function copyImage() {
     .pipe(gulp.dest("./dist/assets/img/"));
 }
 
+function copyPhp() {
+  return gulp.src(["./src/*.php"]).pipe(gulp.dest("./dist"));
+}
+
 // ===============================================
 // # Gulpタスク登録
 // ===============================================
@@ -206,7 +210,7 @@ exports.generateIndexScssTask = generateIndexScss;
 exports.compileSassTask = compileSass;
 exports.formatJSTask = formatJS;
 exports.beautifyHtmlTask = beautifyHtml;
-exports.dev = gulp.series(gulp.parallel(formatJS, compileSass, copyImage, convertToWebp, beautifyHtml), browserInit, watchFiles);
-exports.build = gulp.series(gulp.parallel(formatJS, compileSass, copyImage, convertToWebp, beautifyHtml));
+exports.dev = gulp.series(gulp.parallel(formatJS, compileSass, copyImage, copyPhp, convertToWebp, beautifyHtml), browserInit, watchFiles);
+exports.build = gulp.series(gulp.parallel(formatJS, compileSass, copyImage, copyPhp, convertToWebp, beautifyHtml));
 exports.injectGlobalUse = injectGlobalUseToPartials;
 exports.convertToWebp = convertToWebp;
