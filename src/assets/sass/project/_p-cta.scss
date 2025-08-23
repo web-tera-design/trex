@@ -45,11 +45,23 @@
 
 }
 
-.c-button__text {
-
+.p-cta__secondary__note {
+    color: #000;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 15px; /* 100% */
 }
 
-.c-button__subtext {
-
+.p-cta__secondary__assurance {
+    color: #000;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 200% */
 }
 

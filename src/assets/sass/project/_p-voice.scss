@@ -1,0 +1,102 @@
+@use "../global" as *;
+
+.p-voice {
+
+}
+
+.p-voice__heading {
+
+}
+
+.p-voice__title {
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 53.571px; /* 133.929% */
+}
+
+.p-voice__subtitle {
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px; /* 200% */
+}
+
+.p-voice__wrapper {
+
+}
+
+.p-voice__list {
+
+}
+
+.p-voice__item {
+
+}
+
+.p-voice__item-heading {
+
+}
+
+.p-voice__item-title {
+    color: #000;
+    font-family: "Noto Sans JP";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 136.364% */
+}
+
+.p-voice__item-description {
+    color: #000;
+    font-family: "Noto Sans JP";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px; /* 166.667% */
+}
+
+.p-voice__item-job {
+    color: #000;
+    font-family: "Noto Sans JP";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 13px; /* 100% */
+}
+
+.p-voice__item-labels {
+
+}
+
+.p-voice__item-label {
+
+}
+
+.p-voice__item-text {
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25.66px; /* 197.388% */
+}
+
+.p-voice__item-text--strong {
+    color: #FFF;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28.5px; /* 114% */
+    letter-spacing: -0.5px;
+}
+

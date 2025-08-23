@@ -27,28 +27,29 @@
     color: #FFF;
     text-align: center;
     font-family: "Noto Sans JP";
-    font-size: 18px;
+    font-size: rclamp(12, 18, 320, 1366);
     font-style: normal;
     font-weight: 700;
-    line-height: 35px; /* 194.444% */
+    line-height: rclamp(24, 35, 320, 1366);
 }
 
 .c-button__text {
     color: #FFF;
     font-family: "Noto Sans JP";
     font-size: 30px;
+    font-size: rclamp(20, 30, 320, 1366);
     font-style: normal;
     font-weight: 700;
-    line-height: 35px; /* 116.667% */
+    line-height: rclamp(24, 35, 320, 1366);
     letter-spacing: -0.9px;
 }
 
 .c-button__subtext {
     color: #FFF;
     font-family: "Noto Sans JP";
-    font-size: 15px;
+    font-size: rclamp(10, 15, 320, 1366);
     font-style: normal;
     font-weight: 500;
-    line-height: 35px; /* 233.333% */
+    line-height: rclamp(23, 35, 320, 1366);
 }
 

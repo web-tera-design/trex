@@ -1,0 +1,89 @@
+@use "../global" as *;
+
+.p-contact {
+    padding-block: 90px 128px;
+}
+
+.p-contact__inner {
+    inline-size: min(calc(950px + 20px * 2), 100%);
+    padding-inline: 20px;
+    margin-inline: auto;
+}
+
+.p-contact__heading {
+    padding: 33px 220px;
+    text-align: center;
+}
+
+.p-contact__title {
+
+}
+
+.p-contact__form {
+    inline-size: min(660px, 100%);
+    margin-inline: auto;
+}
+
+.p-contact__table {
+    inline-size: 100%;
+}
+
+.p-contact__row {
+    display: flex;
+    flex-direction: column;
+}
+
+.p-contact__label {
+    color: #000;
+    font-family: "Noto Sans JP";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px; /* 100% */
+    text-align: left;
+}
+
+.p-contact__required {
+    color: #DC5A28;
+    font-family: "Noto Sans JP";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px; /* 100% */
+}
+
+.p-contact__field {
+    
+}
+
+.p-contact__input {
+    border-radius: 10px;
+    border: 1px solid #000;
+    background: #FFF;
+    inline-size: 100%;
+    block-size: 55px;
+    padding-inline-start: 15px;
+}
+
+.p-cta__button {
+    inline-size: fit-content;
+    margin-inline: auto;
+}
+
+.p-cta__button-wrapper {
+
+}
+
+.p-contact__button-subtext {
+
+}
+
+.p-contact__input:invalid {
+  color: #999 !important;
+}
+.p-contact__input option[value=""] {
+  color: #999 !important;
+}
+.p-contact__input option:not([value=""]) {
+  color: #999  !important;
+}

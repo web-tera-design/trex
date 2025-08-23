@@ -1,0 +1,60 @@
+@use "../global" as *;
+
+.p-faq {
+
+}
+
+.p-faq__heading {
+
+}
+
+.p-faq__title {
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 53.571px; /* 133.929% */
+}
+
+.p-faq__subtitle {
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px; /* 200% */
+}
+
+.p-faq__inner {
+
+}
+
+.p-faq__list {
+
+}
+
+.p-faq__item {
+
+}
+
+.p-faq__question {
+    color: #142E50;
+    font-family: "Noto Sans JP";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 40px; /* 160% */
+}
+
+.p-faq__answer {
+    color: #000;
+    font-family: "Noto Sans JP";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px; /* 166.667% */
+}
+
