@@ -1,0 +1,52 @@
+@use "../global" as *;
+
+.p-message {
+
+}
+
+.p-message__inner {
+
+}
+
+.l-section__inner--narrow {
+
+}
+
+.p-message__heading {
+
+}
+
+.p-message__title {
+    color: #000;
+    text-align: center;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: #000;
+    font-family: "Noto Sans JP";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px; /* 133.333% */
+}
+
+.p-message__list {
+
+}
+
+.p-message__item {
+
+}
+
+.p-message__description {
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px; /* 158.824% */
+}
+
+.p-message__image {
+
+}
+

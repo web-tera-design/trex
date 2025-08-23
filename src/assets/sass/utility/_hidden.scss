@@ -1,0 +1,43 @@
+@use "../global" as *;
+
+
+.u-hidden--tb {
+    display: none;
+    @include mq(md) {
+      display: block;
+    }
+}
+  
+.u-hidden--md {
+  display: none;
+  @include mq(lg) {
+    display: block;
+  }
+}
+
+.u-hidden--lg {
+  display: none;
+  @include mq(pc) {
+    display: block;
+  }
+}
+.u-hidden--pc {
+  display: none;
+  @include mq(xl) {
+    display: block;
+  }
+}
+
+.u-br--sp {
+  display: none;
+  @include mq(ct2) {
+    display: inline;
+  }
+}
+
+.u-br--sm-down {
+  display: none;
+  @include mq(sm-down) {
+    display: block;
+  }
+}

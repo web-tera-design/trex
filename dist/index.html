@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ファビコン -->
-  <link rel="shortcut icon" href="/" type="image/x-icon" />
+  <!-- <link rel="shortcut icon" href="/" type="image/x-icon" /> -->
 
   <!-- SEO対策・検索非表示 -->
   <meta name="robots" content="noindex" />
@@ -50,7 +50,7 @@
         <div class="l-header__logo">
           <img src="assets/img/trex-logo.svg" alt="TREXロゴ" width="79" height="24" />
         </div>
-        <nav class="l-header__nav">
+        <nav class="l-header__nav" aria-label="サイトメニュー">
           <ul class="l-header__list">
             <li class="l-header__item">
               <a href="" class="l-header__link">選ばれる理由</a>
@@ -117,22 +117,32 @@
   <section class="p-mv">
     <div class="p-mv__inner l-section__inner--narrow">
       <div class="p-mv__cta">
-        <a href="#" class="c-button">
-          <div class="c-button__wrapper">
-            <span class="c-button__heading">20代未経験歓迎</span>
-            <span class="c-button__text">無料キャリア相談はこちら</span>
-            <span class="c-button__subtext">完全無料・オンライン対応可能</span>
-          </div>
-        </a>
+        <div class="p-mv__button-container">
+          <a href="#" class="c-button p-mv__button">
+            <div class="c-button__wrapper">
+              <span class="c-button__heading">20代未経験歓迎</span>
+              <span class="c-button__text">無料キャリア相談はこちら</span>
+              <span class="c-button__subtext">完全無料・オンライン対応可能</span>
+            </div>
+          </a>
+        </div>
       </div>
       <div class="p-mv__content-wrapper">
         <div class="p-mv__content">
-          <h1 class="p-mv__heading">
-            20代が
-            <br />
-            輝く場所へ。
-          </h1>
-          <p class="p-mv__subtitle">未経験から「提案・企画営業」のプロを目指しませんか？</p>
+          <div class="p-mv__heading-wrapper">
+            <h1 class="p-mv__heading">
+              20代が
+              <br />
+              <span class="p-mv__heading--space">輝く場所へ。</span>
+            </h1>
+          </div>
+          <p class="p-mv__subtitle">
+            未経験から
+            <!-- <br class="u-hidden" /> -->
+            「提案・企画営業」のプロを
+            <!-- <br /> -->
+            目指しませんか？
+          </p>
           <p class="p-mv__description">
             「新しいことに挑戦したいけど、経験がないから不安で一歩踏み出せない…」
             <br />
@@ -141,18 +151,20 @@
             「毎日同じ作業の繰り返しはもう嫌だ。もっとお客様に喜ばれる、やりがいのある仕事をしたい！」
           </p>
         </div>
-        <h2 class="p-mv__content-message">
-          あなたの「やる気」を、
-          <br />
-          未来を切り拓く力に変えませんか？
-        </h2>
+        <div class="p-mv__content-message-wrapper">
+          <h2 class="p-mv__content-message">
+            あなたの「やる気」を、
+            <br />
+            未来を切り拓く力に変えませんか？
+          </h2>
+        </div>
       </div>
     </div>
     <div class="p-mv__results">
       <div class="p-mv__results__inner l-section__inner--narrow">
         <div class="p-mv__results__heading">
           <h2 class="p-mv__results__title">実績</h2>
-          <p class="p-mv__results-subtitle">最大化する実績</p>
+          <p class="p-mv__results-subtitle">20代のキャリアを 最大化する実績</p>
         </div>
         <ul class="p-mv__results__items">
           <li class="p-mv__results__item">
@@ -186,6 +198,7 @@
       </div>
     </div>
   </section>
+
   <section class="p-reason">
     <div class="p-reason__heading">
       <h2 class="p-reason__title">選ばれる理由</h2>
@@ -193,7 +206,7 @@
     </div>
     <div class="p-reason__inner l-section__inner--narrow">
       <ol class="p-reason__cards">
-        <li class="p-reason__card">
+        <li class="p-reason__card p-reason__card--one">
           <span class="p-reason__label">01</span>
           <div class="p-reason__card-wrapper">
             <h3 class="p-reason__card-title">
@@ -223,7 +236,7 @@
             </ul>
           </div>
         </li>
-        <li class="p-reason__card">
+        <li class="p-reason__card p-reason__card--two">
           <span class="p-reason__label">02</span>
           <div class="p-reason__card-wrapper">
             <h3 class="p-reason__card-title">
@@ -258,7 +271,7 @@
             </ul>
           </div>
         </li>
-        <li class="p-reason__card">
+        <li class="p-reason__card p-reason__card--three">
           <span class="p-reason__label">03</span>
           <div class="p-reason__card-wrapper">
             <h3 class="p-reason__card-title">「提案・企画営業」で、あなたの市場価値を飛躍的に高める！</h3>
@@ -266,22 +279,22 @@
             <ul class="p-reason__features">
               <li class="p-reason__feature">
                 <div class="p-reason__feature-texts">
-                  <h4 class="p-reason__feature-text"></h4>
-                  <p class="p-reason__feature-subtext"></p>
+                  <h4 class="p-reason__feature-thirdtext">広告企画営業</h4>
+                  <p class="p-reason__feature-subtext">最適な広告戦略を ゼロから企画・提案</p>
                 </div>
                 <div class="p-reason__feature-texts">
-                  <h4 class="p-reason__feature-text"></h4>
-                  <p class="p-reason__feature-subtext"></p>
+                  <h4 class="p-reason__feature-thirdtext">人材営業</h4>
+                  <p class="p-reason__feature-subtext">最適な人材戦略や 組織活性化を 企画提案</p>
                 </div>
                 <div class="p-reason__feature-texts">
-                  <h4 class="p-reason__feature-text"></h4>
-                  <p class="p-reason__feature-subtext"></p>
+                  <h4 class="p-reason__feature-thirdtext">IT企画営業</h4>
+                  <p class="p-reason__feature-subtext">ソリューションや 新サービスを 企画提案</p>
                 </div>
               </li>
             </ul>
             <div class="p-reason__skills">
-              <p class="p-reason__skills-list"></p>
-              <p class="p-reason__skills-note"></p>
+              <p class="p-reason__skills-list">論理的思考力・プレゼン能力・課題解決能力・顧客開拓力</p>
+              <p class="p-reason__skills-note">どんな業界でも通用する「市場価値の高いスキル」を20代で習得</p>
             </div>
           </div>
         </li>
@@ -323,7 +336,7 @@
               喜んでもらいたい意欲がある方
             </p>
             <div class="p-message__image">
-              <img src="" alt="" />
+              <img src="assets/img/message01.webp" alt="男性" width="476" height="646" />
             </div>
           </li>
           <li class="p-message__item">
@@ -338,7 +351,7 @@
               市場価値の高い人材になりたい方
             </p>
             <div class="p-message__image">
-              <img src="" alt="" />
+              <img src="assets/img/message02.webp" alt="" width="390" height="646" />
             </div>
           </li>
           <li class="p-message__item">
@@ -353,7 +366,7 @@
               キャリアを真剣に変えたいと考えている方
             </p>
             <div class="p-message__image">
-              <img src="" alt="" />
+              <img src="assets/img/message03.webp" alt="" width="462" height="646" />
             </div>
           </li>
         </ul>
@@ -624,57 +637,42 @@
         <form method="post" action="mail.php">
           <table class="formTable">
             <tr>
-              <th>ご用件</th>
-              <td>
-                <select name="ご用件">
-                  <option value="">選択してください</option>
-                  <option value="ご質問・お問い合わせ">ご質問・お問い合わせ</option>
-                  <option value="リンクについて">リンクについて</option>
-                </select>
-              </td>
-            </tr>
-            <tr>
               <th>お名前</th>
               <td>
                 <input size="20" type="text" name="お名前" />
-                ※必須
+                ※
               </td>
             </tr>
             <tr>
-              <th>電話番号（半角）</th>
-              <td><input size="30" type="text" name="電話番号" /></td>
-            </tr>
-            <tr>
-              <th>Mail（半角）</th>
+              <th>メールアドレス</th>
               <td>
                 <input size="30" type="text" name="Email" />
-                ※必須
+                ※
               </td>
             </tr>
             <tr>
-              <th>性別</th>
+              <th>電話番号</th>
               <td>
-                <input type="radio" name="性別" value="男" />
-                男　
-                <input type="radio" name="性別" value="女" />
-                女
+                <input size="30" type="text" name="電話番号" />
+                ※
               </td>
             </tr>
             <tr>
-              <th>サイトを知ったきっかけ</th>
+              <th>年齢</th>
               <td>
-                <input name="サイトを知ったきっかけ[]" type="checkbox" value="友人・知人" />
-                友人・知人　
-                <input name="サイトを知ったきっかけ[]" type="checkbox" value="検索エンジン" />
-                検索エンジン
+                <input type="number" name="年齢" min="0" max="120" />
               </td>
             </tr>
             <tr>
-              <th>
-                お問い合わせ内容
-                <br />
-              </th>
-              <td><textarea name="お問い合わせ内容" cols="50" rows="5"></textarea></td>
+              <th>希望面談方法</th>
+              <td>
+                <select name="希望面談方法">
+                  <option value="">選択してください</option>
+                  <option value="対面">対面</option>
+                  <option value="電話">電話</option>
+                  <option value="オンライン">オンライン</option>
+                </select>
+              </td>
             </tr>
           </table>
           <p align="center">

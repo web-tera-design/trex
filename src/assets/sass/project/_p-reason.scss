@@ -1,0 +1,177 @@
+@use "../global" as *;
+
+.p-reason {
+
+}
+
+.p-reason__heading {
+background-color: $color-heading;
+
+}
+
+.p-reason__title {
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 53.571px; /* 133.929% */
+}
+
+.p-reason__subtitle {
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 53.571px; /* 267.857% */
+}
+
+.p-reason__inner {
+
+}
+
+.l-section__inner--narrow {
+
+}
+
+.p-reason__cards {
+
+}
+
+.p-reason__card {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba(20, 46, 80, 0.5); // 50%透明のマスク
+      z-index: 1;
+    }
+}
+
+.p-reason__card--one {
+background: url(../img/reason01.webp) no-repeat center center / cover;
+}
+
+.p-reason__card--two {
+background: url(../img/reason02.webp) no-repeat center center / cover;
+
+}
+
+.p-reason__card--three {
+
+background: url(../img/reason03.webp) no-repeat center center / cover;
+}
+
+.p-reason__label {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    background-color: $color-wt;
+    color: #142E50;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 28.5px; /* 123.913% */
+    letter-spacing: -0.46px;
+}
+
+.p-reason__card-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.p-reason__card-title {
+    color: #FFF;
+    text-align: center;
+    font-feature-settings: 'halt' on;
+    font-family: "Noto Sans JP";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 35px; /* 140% */
+}
+
+.p-reason__card-description {
+    color: #FFF;
+    font-family: "Noto Sans JP";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px; /* 166.667% */
+}
+
+.p-reason__features {
+
+}
+
+.p-reason__feature {
+}
+
+.p-reason__feature-text {
+    background-color: $color-rd;
+    border-radius: 100vmax;
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 133.333% */
+}
+
+.p-reason__feature-texts {
+    background-color: $color-rd;
+    border-radius: 100vmax;
+}
+
+.p-reason__feature-thirdtext {
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 111.111% */
+}
+
+.p-reason__feature-subtext {
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px; /* 166.667% */
+}
+
+.p-reason__skills {
+
+}
+
+.p-reason__skills-list {
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 200% */
+}
+
+.p-reason__skills-note {
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 133.333% */
+}
+

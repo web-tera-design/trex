@@ -1,7 +1,13 @@
 @use "../global" as *;
 
 .l-header {
+    inline-size: min(600px,100%);
     padding-top: 20px;
+    border: 1px solid $color-bk;
+    margin-inline: auto;
+    @include mq(lg) {
+        inline-size: min(1366px, 100%);
+    }
 }
 
 .l-header__inner {

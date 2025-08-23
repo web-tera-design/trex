@@ -3,14 +3,17 @@
 .c-button {
     display: inline-block;
     position: relative;
+    background-color: $color-rd;
+    max-inline-size: 450px;
+ 
         &::after {
       position: absolute;
       content: "";
       top: 8px;
-      left: 8px;
+      left: -8px;
       width: 100%;
       height: 100%;
-      background-color: $color-rd;
+      background-color: $color-heading;
       z-index: -1;
     }
 }
@@ -21,14 +24,31 @@
 }
 
 .c-button__heading {
-
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 35px; /* 194.444% */
 }
 
 .c-button__text {
-
+    color: #FFF;
+    font-family: "Noto Sans JP";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 35px; /* 116.667% */
+    letter-spacing: -0.9px;
 }
 
 .c-button__subtext {
-
+    color: #FFF;
+    font-family: "Noto Sans JP";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 35px; /* 233.333% */
 }
 

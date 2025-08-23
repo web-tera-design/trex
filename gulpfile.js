@@ -155,6 +155,10 @@ function watchFiles() {
 
   // dist内HTML変更監視を追加
   gulp.watch("./dist/**/*.html").on("change", browserSync.reload);
+  // ここでPHPファイルの監視を追加
+  gulp.watch("./src/**/*.php").on("change", () => {
+    gulp.series(copyPhp, reloadBrowser)();
+  });
 }
 
 // ===============================================

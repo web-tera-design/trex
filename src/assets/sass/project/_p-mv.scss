@@ -1,7 +1,13 @@
 @use "../global" as *;
 
 .p-mv {
-
+    inline-size: min(600px,100%);
+    padding-top: 20px;
+    border: 1px solid $color-bk;
+    margin-inline: auto;
+    @include mq(lg) {
+        inline-size: min(1366px, 100%);
+    }
 }
 
 .p-mv__inner {
@@ -17,7 +23,18 @@
 }
 
 .p-mv__cta {
+    background: url(../img/mv-image.webp) no-repeat center center / cover;
+    aspect-ratio: 582 / 581;
+    inline-size: 100%;
+    position: relative;
+    z-index: -2;
+}
 
+.p-mv__button-container {
+    position: absolute;
+    left: 50%;
+    translate: -50%;;
+    bottom: 17px;
 }
 
 .p-mv__content-wrapper {
@@ -28,20 +45,50 @@
 
 }
 
-.p-mv__heading {
+.p-mv__heading-wrapper {
+    transform: skew(-10deg);
+}
 
+.p-mv__heading {
+    text-align: center;
+    padding-inline: 10px;
+    color: #142E50;
+    font-family: $font-heading;
+    font-size: rclamp(36, 140, 320, 1366);
+    line-height:rclamp(42, 138, 320, 1366);
+    letter-spacing: rclamp(0, -2.8, 320, 1366);
+}
+
+.p-mv__heading--space {
+    margin-inline-start: 1em;
 }
 
 .p-mv__subtitle {
-
+    padding: 8px 12px;
+    color: #FFF;
+    font-size: 27px;
+    font-size: rclamp(16, 27, 320, 1366);
+    font-weight: 700;
+    line-height: rclamp(24, 27, 320, 1366);
+    background-color: $color-heading;
 }
 
 .p-mv__description {
+    font-size: rclamp(12, 15, 320, 1366);
+    font-weight: 500;
+    line-height: rclamp(18, 25, 320, 1366);
+}
 
+.p-mv__content-message-wrapper {
+    transform: skew(-10deg);
 }
 
 .p-mv__content-message {
-
+    color: #142E50;
+    font-size: rclamp(26, 40, 320, 1366);
+    font-weight: 700;
+    line-height: rclamp(30, 45, 320, 1366);/* 112.5% */
+    letter-spacing: -2px;
 }
 
 .p-mv__results {
@@ -53,15 +100,27 @@
 }
 
 .p-mv__results__heading {
-
+    background-color: $color-rd;
 }
 
 .p-mv__results__title {
-
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 100% */
 }
 
 .p-mv__results-subtitle {
-
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; /* 150% */
 }
 
 .p-mv__results__items {
@@ -69,11 +128,19 @@
 }
 
 .p-mv__results__item {
-
+    text-align: center;
+    background-color: $color-heading;
+    border-radius: 100vmax;
 }
 
 .p-mv__results__item-heading {
-
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px; /* 200% */
 }
 
 .p-mv__results__item-desc-wrapper {
@@ -81,14 +148,33 @@
 }
 
 .p-mv__results__item-description {
-
+    color: #DC5A28;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px; /* 57.143% */
+    letter-spacing: -1.4px;
 }
 
 .p-mv__results__item-sub {
-
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px; /* 133.333% */
 }
 
 .p-mv__results__item-third {
-
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px; /* 133.333% */
 }
 

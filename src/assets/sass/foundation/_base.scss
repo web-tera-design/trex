@@ -6,6 +6,10 @@ body {
     background-color: $color-background-main;
     line-height: 150%;
     letter-spacing: 1px;
+    // padding-inline: 20px;
+    @include mq(lg) {
+      padding-inline: revert;
+    }
   }
 
   body.is-fixed {
