@@ -1,6 +1,7 @@
 @use "../global" as *;
 
 .c-button {
+    border-radius: 10px;
     display: inline-block;
     position: relative;
     background-color: $color-rd;

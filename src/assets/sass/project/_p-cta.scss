@@ -92,23 +92,21 @@
 }
 
 .p-cta__secondary__note {
-    color: #000;
+    margin-block-start: min(1.46412884vw, 20px);
     text-align: center;
-    font-family: "Noto Sans JP";
-    font-size: 15px;
-    font-style: normal;
+    color: $color-bk;
+    font-size: min(1.09809663vw, 15px);
     font-weight: 500;
-    line-height: 15px; /* 100% */
+    line-height: min(1.09809663vw, 15px);
 }
 
 .p-cta__secondary__assurance {
-    color: #000;
+    margin-block-start: min(1.75695461vw, 24px);
+    color: $color-bk;
     text-align: center;
-    font-family: "Noto Sans JP";
-    font-size: 20px;
-    font-style: normal;
+    font-size: min(1.46412884vw,20px);
     font-weight: 700;
-    line-height: 40px; /* 200% */
+    line-height: min(2.92825769vw, 40px);
 }
 
 .p-cta__assurances {

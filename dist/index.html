@@ -642,6 +642,7 @@
       </dl>
     </div>
   </section>
+
   <section class="p-merit">
     <div class="p-merit__inner l-section__inner--narrow">
       <div class="p-merit__heading">
@@ -684,81 +685,87 @@
       </ul>
     </div>
   </section>
+
   <section class="p-cta">
-    <div class="p-cta__heading">
-      <h3 class="p-cta__title">あなたの未来はここから始まります！</h3>
-    </div>
-    <div class="p-cta__button-content">
-      <p class="p-cta__message">クリックして30秒で完了！</p>
-      <a href="#" class="c-button p-cta__button">
-        <div class="c-button__wrapper p-cta__button-wrapper">
-          <span class="c-button__text">無料キャリア相談はこちら</span>
-          <span class="c-button__subtext">完全無料・オンライン対応可能</span>
-        </div>
-      </a>
-      <p class="p-cta__secondary__note">お申し込み後、24時間以内に担当者からご連絡いたします。</p>
-      <p class="p-cta__secondary__assurance">無理な勧誘は一切いたしません。安心してご相談ください！</p>
+    <div class="p-cta__inner l-section__inner--narrow">
+      <div class="p-cta__heading">
+        <h3 class="p-cta__title">あなたの未来はここから始まります！</h3>
+      </div>
+      <div class="p-cta__button-content">
+        <p class="p-cta__message">クリックして30秒で完了！</p>
+        <a href="#" class="c-button p-cta__button">
+          <div class="c-button__wrapper p-cta__button-wrapper">
+            <span class="c-button__text">無料キャリア相談はこちら</span>
+            <span class="c-button__subtext">完全無料・オンライン対応可能</span>
+          </div>
+        </a>
+        <p class="p-cta__secondary__note">お申し込み後、24時間以内に担当者からご連絡いたします。</p>
+        <p class="p-cta__secondary__assurance">無理な勧誘は一切いたしません。安心してご相談ください！</p>
+      </div>
     </div>
   </section>
+
   <section class="p-contact">
     <div class="p-contact__inner l-section__inner--narrow">
       <div class="p-contact__heading">
         <h2 class="p-contact__title">無料キャリア相談お申し込みフォーム</h2>
       </div>
-      <form method="post" action="mail.php" class="p-contact__form">
-        <table class="p-contact__table">
-          <tr class="p-contact__row">
-            <th class="p-contact__label">
-              お名前
-              <span class="p-contact__required">※</span>
-            </th>
-            <td class="p-contact__field">
-              <input size="20" type="text" name="お名前" class="p-contact__input" placeholder="お名前" />
-            </td>
-          </tr>
-          <tr class="p-contact__row">
-            <th class="p-contact__label">
-              メールアドレス
-              <span class="p-contact__required">※</span>
-            </th>
-            <td class="p-contact__field">
-              <input size="30" type="text" name="Email" class="p-contact__input" placeholder="メールアドレス" />
-            </td>
-          </tr>
-          <tr class="p-contact__row">
-            <th class="p-contact__label">
-              電話番号
-              <span class="p-contact__required">※</span>
-            </th>
-            <td class="p-contact__field">
-              <input size="30" type="text" name="電話番号" class="p-contact__input" placeholder="電話番号" />
-            </td>
-          </tr>
-          <tr class="p-contact__row">
-            <th class="p-contact__label">年齢</th>
-            <td class="p-contact__field">
-              <input name="年齢" min="20" max="80" class="p-contact__input" placeholder="年齢" />
-            </td>
-          </tr>
-          <tr class="p-contact__row">
-            <th class="p-contact__label">希望面談方法</th>
-            <td class="p-contact__field">
-              <select name="希望面談方法" class="p-contact__input">
-                <option value="">選択してください</option>
-                <option value="対面">対面</option>
-                <option value="電話">電話</option>
-                <option value="オンライン">オンライン</option>
-              </select>
-            </td>
-          </tr>
-        </table>
-        <button type="submit" class="c-button p-cta__button">
-          <span class="c-button__wrapper p-cta__button-wrapper">
-            <span class="c-button__text">無料相談に申し込む</span>
-            <span class="c-button__subtext p-contact__button-subtext">送信する</span>
-          </span>
-        </button>
-      </form>
+      <div class="p-contact__table-wrapper">
+        <form method="post" action="mail.php" class="p-contact__form">
+          <table class="p-contact__table">
+            <tr class="p-contact__row">
+              <th class="p-contact__label">
+                お名前
+                <span class="p-contact__required">※</span>
+              </th>
+              <td class="p-contact__field">
+                <input size="20" type="text" name="お名前" class="p-contact__input" placeholder="お名前" />
+              </td>
+            </tr>
+            <tr class="p-contact__row">
+              <th class="p-contact__label">
+                メールアドレス
+                <span class="p-contact__required">※</span>
+              </th>
+              <td class="p-contact__field">
+                <input size="30" type="text" name="Email" class="p-contact__input" placeholder="メールアドレス" />
+              </td>
+            </tr>
+            <tr class="p-contact__row">
+              <th class="p-contact__label">
+                電話番号
+                <span class="p-contact__required">※</span>
+              </th>
+              <td class="p-contact__field">
+                <input size="30" type="text" name="電話番号" class="p-contact__input" placeholder="電話番号" />
+              </td>
+            </tr>
+            <tr class="p-contact__row">
+              <th class="p-contact__label">年齢</th>
+              <td class="p-contact__field">
+                <input name="年齢" min="20" max="80" class="p-contact__input" placeholder="年齢" />
+              </td>
+            </tr>
+            <tr class="p-contact__row">
+              <th class="p-contact__label">希望面談方法</th>
+              <td class="p-contact__field">
+                <select name="希望面談方法" class="p-contact__input">
+                  <option value="">選択してください</option>
+                  <option value="対面">対面</option>
+                  <option value="電話">電話</option>
+                  <option value="オンライン">オンライン</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+      <button type="submit" class="c-button p-cta__button">
+        <span class="c-button__wrapper p-cta__button-wrapper">
+          <span class="c-button__text">無料相談に申し込む</span>
+          <span class="c-button__subtext p-contact__button-subtext">送信する</span>
+        </span>
+      </button>
     </div>
   </section>
   <footer class="l-footer">

@@ -1,11 +1,19 @@
 @use "../global" as *;
 
 .p-merit {
-
+    background-color: $color-background-merit;
+    padding-block: min(3.73352855vw, 51px) min(5.12445095vw, 70px);
+    inline-size: min(1366px, 100%);
+    margin-inline: auto;
 }
 
 .p-merit__inner {
-
+    inline-size: min(1134px, 100%);
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .p-merit__heading {
@@ -13,23 +21,20 @@
 }
 
 .p-merit__title {
-    color: #000;
-    text-align: center;
-    font-family: "Noto Sans JP";
-    font-size: 30px;
-    font-style: normal;
+    color: $color-bk;
+    font-size: min(2.19619327vw, 30px);
     font-weight: 700;
-    line-height: 40px; /* 133.333% */
+    line-height: min(2.92825769vw, 40px);
 }
 
 .p-merit__title--strong {
-    color: #DC5A28;
-    text-align: center;
-    font-family: Roboto;
-    font-size: 60px;
-    font-style: normal;
+    display: inline-block;
+    transform: skew(-10deg);
+    color: $color-rd;
+    font-family: $font-sub;
+    font-size: min(4.39238653vw, 60px);
     font-weight: 600;
-    line-height: 30px; /* 50% */
+    line-height: min(2.19619327vw, 30px);
     letter-spacing: -1.2px;
 }
 
@@ -38,30 +43,53 @@
 }
 
 .p-merit__list {
+    margin-block-start: min(1.75695461vw, 24px);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    @include mq(lg) {
+      flex-direction: row;
 
+    }
 }
 
 .p-merit__item {
+    position: relative;
+    z-index: 10;
+    inline-size: min(19.7657vw, 270px);
+    background-color: $color-heading;
+    border-radius: 10px;
+    padding-block: min(2.92825769vw, 40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: min(1.75695461vw, 24px);
 
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inline-size: 100%;
+      block-size: 100%;
+      border-radius: 10px;
+      inset-inline-start: -10px;
+      inset-block-start: 10px;
+      background-color: $color-rd;
+    }
 }
 
 .p-merit__subtitle {
-    color: #FFF;
-    text-align: center;
-    font-family: "Noto Sans JP";
-    font-size: 25px;
-    font-style: normal;
+    color: $color-wt;
+    font-size: min(1.83016105vw, 25px);
     font-weight: 700;
-    line-height: 25px; /* 100% */
+    line-height: 100%;
 }
 
 .p-merit__description {
-    color: #FFF;
     text-align: center;
-    font-family: "Noto Sans JP";
-    font-size: 15px;
-    font-style: normal;
+    color: $color-wt;
+    font-size: min(1.09809663vw, 15px);
     font-weight: 500;
-    line-height: 25px; /* 166.667% */
+    line-height: min(1.83016105vw, 25px);
 }
 

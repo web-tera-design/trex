@@ -1,6 +1,9 @@
 @use "../global" as *;
 
 .p-contact {
+    inline-size: min(1366px, 100%);
+    background-color: $color-background-main;
+    margin-inline: auto;
     padding-block: 90px 128px;
 }
 
@@ -11,58 +14,76 @@
 }
 
 .p-contact__heading {
+    background-color: $color-heading;
+    color: $color-wt;
     padding: 33px 220px;
     text-align: center;
+    font-size: rem(16);
 }
 
 .p-contact__title {
 
 }
 
+.p-contact__table-wrapper {
+
+}
+
 .p-contact__form {
-    inline-size: min(660px, 100%);
+    background-color: $color-wt;
+    padding-block: min(5.92972182vw, 81px) min(6.73499268vw, 92px);
     margin-inline: auto;
 }
 
+
 .p-contact__table {
     inline-size: 100%;
+    tbody {
+        display: flex;
+        flex-direction: column;
+        gap: min(2.19619327vw, 30px);
+    }
 }
 
 .p-contact__row {
     display: flex;
     flex-direction: column;
+    inline-size: min(48.31625183vw, 660px);
+    margin-inline: auto;
 }
 
+.p-contact__row-flex {
+    display: flex;
+}
+
+
+
 .p-contact__label {
-    color: #000;
-    font-family: "Noto Sans JP";
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 15px; /* 100% */
     text-align: left;
+    color: $color-bk;
+    font-size: min(1.09809663vw, 15px);
+    font-weight: 700;
+    line-height: min(1.09809663vw, 15px);
 }
 
 .p-contact__required {
-    color: #DC5A28;
-    font-family: "Noto Sans JP";
-    font-size: 15px;
-    font-style: normal;
+    color: $color-rd;
+    font-size: min(1.09809663vw, 15px);
     font-weight: 700;
-    line-height: 15px; /* 100% */
+    line-height: min(1.09809663vw, 15px);
 }
 
 .p-contact__field {
-    
+    margin-block-start: min(0.65885798vw, 9px);
 }
 
 .p-contact__input {
     border-radius: 10px;
-    border: 1px solid #000;
-    background: #FFF;
+    border: 1px solid $color-bk;
+    background: $color-wt;
     inline-size: 100%;
-    block-size: 55px;
-    padding-inline-start: 15px;
+    block-size: min(4.02635432vw, 55px);
+    padding-inline-start: min(1.09809663vw, 15px);
 }
 
 .p-cta__button {

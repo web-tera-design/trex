@@ -73,6 +73,7 @@
     letter-spacing: rclamp(0, -2.8, 320, 1366);
     white-space: nowrap;
     overflow: visible;
+    
     @include mq(lg) {
         letter-spacing: -2.8px;
         text-align: left;
