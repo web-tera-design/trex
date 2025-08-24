@@ -1,11 +1,10 @@
 @use "../global" as *;
 
 .p-mv {
-    inline-size: min(600px,100%);
     border: 1px solid $color-bk;
     margin-inline: auto;
+    inline-size: min(840px, 100%);
     @include mq(lg) {
-
         inline-size: min(1366px, 100%);
     }
 }
@@ -145,6 +144,10 @@
 
 .p-mv__results {
     border-block-start: 1px solid $color-heading;
+    inline-size: min(840px, 100%);
+    @include mq(lg) {
+      inline-size: min(1366px, 100%);
+    }
 }
 
 .p-mv__results__inner {

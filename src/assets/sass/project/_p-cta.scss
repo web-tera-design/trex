@@ -1,8 +1,26 @@
 @use "../global" as *;
 
 .p-cta {
+
+}
+
+.p-cta__inner {
     background-color: $color-wt;
-    padding-block: 71px 52px;
+    @include mq(lg) {
+        inline-size: min(calc(1326px + 20px * 2), 100%);
+        padding-inline: min(0.01464129vw, 20px);
+        margin-inline: auto;
+        padding-block: min(5.19765739vw, 71px) min(3.80673499vw, 52px);
+    }
+}
+
+.p-cta__inner--three {
+    @include mq(lg) {
+        inline-size: min(calc(1326px + 20px * 2), 100%);
+        padding-inline: min(1.46412884vw, 20px);
+        margin-inline: auto;
+        padding-block: min(3.66032211vw, 50px) min(3.22108346vw, 44px);
+    }
 }
 
 .p-cta__heading {
@@ -17,6 +35,10 @@
     font-weight: 700;
     line-height: rclamp(22, 40, 320, 1366);
     letter-spacing: -1.29px;
+    @include mq(lg) {
+      font-size: min(3.14787701vw, 43px);
+      line-height: min(2.92825769vw, 40px);
+    }
 }
 
 .p-cta__title--dot {
@@ -31,7 +53,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-block-start: 46px;
+    margin-block-start: min(3.36749634vw, 46px);
+}
+
+.p-cta__button-content--three {
+    margin-block-start: min(2.92825769vw, 40px);
+}
+
+.p-cta__button {
+
 }
 
 .p-cta__message {
@@ -39,9 +69,10 @@
     inline-size: fit-content;
     margin-inline: auto;
     color: $color-bk;
-    font-size: rclamp(14, 20, 320, 1366);
     font-weight: 500;
-    line-height: rclamp(24, 35, 320, 1366);
+    font-size: min(1.46412884vw, 20px);
+    line-height: min(2.56222548vw, 35px);
+
     &::before {
       content: "";
       position: absolute;
@@ -53,7 +84,7 @@
 }
 
 .p-cta__button {
-    margin-block-start: 3px;
+    margin-block-start: min(0.21961933vw, 3px);
 }
 
 .p-cta__button-wrapper {
@@ -78,5 +109,25 @@
     font-style: normal;
     font-weight: 700;
     line-height: 40px; /* 200% */
+}
+
+.p-cta__assurances {
+    inline-size: min(32.942898975vw, 450px);
+    margin-block-start: min(2.04978038vw, 28px);
+    margin-inline: auto;
+}
+
+.p-cta__assurance {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.p-cta__assurance-text {
+    color: $color-bk;
+    font-size: min(1.09809663vw, 15px);
+    font-weight: 700;
+    line-height: min(1.83016105vw, 25px);
 }
 

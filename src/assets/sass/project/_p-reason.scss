@@ -36,6 +36,7 @@
 
 .p-reason__inner {
     padding-block: 65px 75px;
+    padding-inline: 0;
     @include mq(lg) {
         inline-size: min(calc(1120px + 20px * 2), 100%);
         padding-inline: 20px;
@@ -52,6 +53,7 @@
     flex-direction: column;
     gap: 10px;
     margin-inline: auto;
+    max-inline-size: 600px;
     @include mq(lg) {
       display: grid;
       grid-template-columns: calc(558 / 1120 * 100%) calc(558 / 1120 * 100%);

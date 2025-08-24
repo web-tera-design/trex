@@ -1,11 +1,16 @@
 @use "../global" as *;
 
 .p-message {
-
+padding-block: 102px 184px;
 }
 
 .p-message__inner {
-
+    padding-inline: 0;
+@include mq(lg) {
+  inline-size: min(calc(1326px + 20px * 2), 100%);
+//   padding-inline: 20px;
+  margin-inline: auto;
+}
 }
 
 .l-section__inner--narrow {
@@ -17,36 +22,98 @@
 }
 
 .p-message__title {
-    color: #000;
+    color: $color-bk;
     text-align: center;
-    -webkit-text-stroke-width: 0.3px;
-    -webkit-text-stroke-color: #000;
-    font-family: "Noto Sans JP";
-    font-size: 30px;
-    font-style: normal;
+    font-size: rclamp(16, 30, 320, 1366);
     font-weight: 500;
-    line-height: 40px; /* 133.333% */
+    line-height: rclamp(21, 40, 320, 1366);
 }
 
 .p-message__list {
+    max-inline-size: 600px;
+    margin-inline: auto;
+    margin-block-start: 26px;
+    @include mq(lg) {
+      max-inline-size: 100%;
+      display: grid;
+      grid-template-columns: 33.3% 33.3% 33.3%;
+    }
+}
+
+.p-message__item-wrapper {
 
 }
 
 .p-message__item {
+    position: relative;
+     display: flex;
+     flex-direction: column;
+     gap: rclamp(16, 43, 320, 1366);
+     padding-block: rclamp(30, 74, 320, 1366) rclamp(40, 83, 320, 1366);
+}
 
+.p-message__item--one {
+background-color: $color-heading;
+}
+
+.p-message__item--two {
+    background-color: $color-background-card;
+}
+
+.p-message__item--three {
+background-color: $color-rd;
 }
 
 .p-message__description {
-    color: #FFF;
+    color: $color-wt;
     text-align: center;
-    font-family: "Noto Sans JP";
-    font-size: 17px;
-    font-style: normal;
+    font-size: rclamp(14, 17, 320, 1366);
     font-weight: 700;
-    line-height: 27px; /* 158.824% */
+    line-height: rclamp(24, 27, 320, 1366);
+}
+
+.p-message__description--two {
+    color: $color-bk;
 }
 
 .p-message__image {
+    position: relative;
+    z-index: 2;
+    margin-inline: auto;
 
 }
 
+.p-message__image--one {
+    inline-size: 238px;
+    img {
+        inline-size: 100%;
+        block-size: auto;
+        aspect-ratio: 238 / 323;
+    }
+
+    @include mq(lg) {
+        margin-block-start: -80px;
+    }
+}
+.p-message__image--two {
+    inline-size: 195px;
+    img {
+        inline-size: 100%;
+        block-size: auto;
+        aspect-ratio: 195 / 323;
+    }
+    @include mq(lg) {
+        margin-block-start: -100px;
+    }
+}
+.p-message__image--three {
+    inline-size: 231px;
+    img {
+        inline-size: 100%;
+        block-size: auto;
+        aspect-ratio: 231 / 323;
+    }
+    @include mq(lg) {
+        margin-block-start: -100px;
+    }
+}

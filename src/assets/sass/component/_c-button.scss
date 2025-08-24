@@ -4,7 +4,12 @@
     display: inline-block;
     position: relative;
     background-color: $color-rd;
-    max-inline-size: 450px;
+    inline-size: min(32.942898975vw, 450px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: min(1.68374817vw, 23px) min(3.66032211vw, 50px) min(1.02489019vw, 14px);
  
         &::after {
       position: absolute;
@@ -21,26 +26,23 @@
 .c-button__wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .c-button__heading {
-    color: #FFF;
+    color: $color-wt;
     text-align: center;
-    font-family: "Noto Sans JP";
-    font-size: rclamp(12, 18, 320, 1366);
-    font-style: normal;
+    font-size: min(1.31771596vw, 18px);
     font-weight: 700;
-    line-height: rclamp(24, 35, 320, 1366);
+    line-height: min(2.56222548vw, 35px);
 }
 
 .c-button__text {
-    color: #FFF;
-    font-family: "Noto Sans JP";
-    font-size: 30px;
-    font-size: rclamp(20, 30, 320, 1366);
-    font-style: normal;
+    color: $color-wt;
+    font-size: min(2.19619327vw, 30px);
     font-weight: 700;
-    line-height: rclamp(24, 35, 320, 1366);
+    line-height: min(2.56222548vw, 35px);
     letter-spacing: -0.9px;
 }
 

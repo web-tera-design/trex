@@ -26,7 +26,7 @@
 
 .l-section__inner--narrow {
     @include mq(lg-down) {
-        inline-size: min(calc(600px + 20px * 2), 100%);
+        inline-size: min(calc(800px + 20px * 2), 100%);
         padding-inline: 20px;
         margin-inline: auto;
     }

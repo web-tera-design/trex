@@ -1,34 +1,44 @@
 @use "../global" as *;
 
-.p-cta__top {
+.p-cta__top-wrapper {
+    inline-size: min(1366px ,100%);
+    margin-inline: auto;
+    padding-block: min(8.71156662vw, 119px) min(7.32064422vw, 100px);
+    background-color: $color-rd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.p-cta__top-heading-wrapper {
 }
 
 .p-cta__top-heading {
-    color: #FFF;
+    color: $color-wt;
+    transform: skew(-10deg);
     text-align: center;
-    font-feature-settings: 'halt' on;
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: #FFF;
-    font-family: "Sawarabi Mincho";
-    font-size: 57px;
-    font-style: normal;
+    font-family: $font-heading;
+    font-size: min(4.17276720vw, 57px);
     font-weight: 400;
-    line-height: 40px; /* 70.175% */
+    line-height: min(2.92825769vw, 40px);
     letter-spacing: -1.71px;
 }
 
-.p-cta__top--dot {
+.p-cta__top-heading--space {
+    margin-inline-start: -0.8em;
+}
 
+.p-cta__top--dot {
+ margin-inline-start: -0.3em;
 }
 
 .p-cta__top-lead {
-    color: #FFF;
+    margin-block-start: min(2.19619327vw, 30px);
     text-align: center;
-    font-family: "Noto Sans JP";
-    font-size: 25px;
-    font-style: normal;
+    color: $color-wt;
+    font-size: min(1.83016105vw, 25px);
     font-weight: 500;
-    line-height: 40px; /* 160% */
+    line-height: min(2.92825769vw, 40px);
 }
 

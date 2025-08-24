@@ -5,39 +5,67 @@
 }
 
 .p-voice__heading {
+        inline-size: min(1366px, 100%);
+        margin-inline: auto;
+        background-color: $color-heading;
+    padding-block: rclamp(25, 75, 320, 1366);
 
 }
 
 .p-voice__title {
-    color: #FFF;
+    color: $color-wt;
     text-align: center;
-    font-family: "Noto Sans JP";
-    font-size: 40px;
-    font-style: normal;
+    font-size: rclamp(20, 40, 320, 1366);
     font-weight: 700;
-    line-height: 53.571px; /* 133.929% */
+    line-height: rclamp(26, 54, 320, 1366);
+
+    @include mq(lg) {
+      font-size: min(2.928257686vw, 40px);
+    }
 }
 
 .p-voice__subtitle {
-    color: #FFF;
+    color: $color-wt;
     text-align: center;
-    font-family: "Noto Sans JP";
-    font-size: 20px;
-    font-style: normal;
+    font-size: rclamp(12, 20, 320, 1366);
     font-weight: 500;
-    line-height: 40px; /* 200% */
+    line-height: rclamp(24, 40, 320, 1366);
+
+    @include mq(lg) {
+      font-size: min(1.464128843vw, 20px);
+    }
 }
 
 .p-voice__wrapper {
+    inline-size: min(1256px, 100%);
+    margin-inline: auto;
 
+    @include mq(lg) {
+      inline-size: min(91.947291361vw, 1256px);
+    }
 }
 
 .p-voice__list {
-
+    padding-block: rclamp(30, 53, 320, 1366) rclamp(50, 101, 320, 1366);
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(304px, 1fr));
+    
+    @include mq(lg) {
+        grid-template-columns: repeat(4, 1fr);
+      padding-block: min(3.879941434vw, 53px) min(7.393850658vw, 101px);
+      gap: min(0.732064421vw, 10px);
+    }
 }
 
 .p-voice__item {
-
+    padding: rclamp(16, 32, 320, 1366) rclamp(10, 20, 320, 1366) rclamp(14, 29, 320, 1366) rclamp(10, 20, 320, 1366);
+    background-color: $color-background-card;
+    
+    @include mq(lg) {
+        inline-size: min(22.254758418vw, 304px);
+      padding: min(2.342606149vw, 32px) min(1.464128843vw, 20px) min(2.122986822vw, 29px) min(1.464128843vw, 20px);
+    }
 }
 
 .p-voice__item-heading {
@@ -45,58 +73,94 @@
 }
 
 .p-voice__item-title {
-    color: #000;
-    font-family: "Noto Sans JP";
-    font-size: 22px;
-    font-style: normal;
+    padding-bottom: rclamp(10, 17, 320, 1366);
+    color: $color-bk;
+    font-size: rclamp(14, 22, 320, 1366);
     font-weight: 700;
-    line-height: 30px; /* 136.364% */
+    line-height: rclamp(19, 30, 320, 1366);
+
+    @include mq(lg) {
+        padding-bottom: min(1.244509516vw, 17px);
+        font-size: min(1.610541727vw, 22px);
+    }
 }
 
 .p-voice__item-description {
-    color: #000;
-    font-family: "Noto Sans JP";
-    font-size: 15px;
-    font-style: normal;
+    padding-block-start: rclamp(10, 15, 320, 1366);
+    border-block-start: 1px solid $color-bk;
+    color: $color-bk;
+    font-size: rclamp(12, 15, 320, 1366);
     font-weight: 500;
-    line-height: 25px; /* 166.667% */
+    line-height: rclamp(20, 25, 320, 1366);
+    @include mq(lg) {
+      padding-block-start: min(1.098096632vw, 15px);
+      font-size: min(1.098096632vw, 15px);
+    }
 }
 
 .p-voice__item-job {
-    color: #000;
-    font-family: "Noto Sans JP";
-    font-size: 13px;
-    font-style: normal;
+    margin-block-start: rclamp(14, 21, 320, 1366);
+    color: $color-bk;
+    font-size: rclamp(10, 13, 320, 1366);
     font-weight: 700;
-    line-height: 13px; /* 100% */
+    line-height: 100%; /* 100% */
+    @include mq(lg) {
+      margin-block-start: min(1.537335285vw, 21px);
+      font-size: min(0.951683748vw, 13px);
+    }
 }
 
 .p-voice__item-labels {
+    display: flex;
+    gap: 4px;
+    margin-block-start: rclamp(16, 30, 320, 1366);
 
+    @include mq(lg) {
+        gap: min(0.292825768vw, 4px);
+        margin-block-start: min(2.196193265vw, 30px);
+    }
 }
 
 .p-voice__item-label {
-
+    inline-size: 130px;
+    block-size: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-rd;
+    @include mq(lg) {
+        inline-size: min(9.516837481vw, 130px);
+        block-size: min(3.513909224vw, 48px);  
+    }
+    
+}
+.p-voice__item-label2 {
+    background-color: $color-heading;
 }
 
 .p-voice__item-text {
-    color: #FFF;
+    color: $color-wt;
     text-align: center;
-    font-family: "Noto Sans JP";
-    font-size: 13px;
-    font-style: normal;
+    font-size: rclamp(10, 13, 320, 1366);
     font-weight: 500;
-    line-height: 25.66px; /* 197.388% */
+    line-height: rclamp(20, 26, 320, 1366);
+
+    @include mq(lg) {
+      font-size: min(0.951683748vw, 13px);
+    }
 }
 
 .p-voice__item-text--strong {
-    color: #FFF;
+    color: $color-wt;
     text-align: center;
-    font-family: Roboto;
-    font-size: 25px;
-    font-style: normal;
+    font-family: $font-sub;
+    font-size: rclamp(16, 25, 320, 1366);
     font-weight: 600;
-    line-height: 28.5px; /* 114% */
+    line-height: rclamp(18, 28.5, 320, 1366);
     letter-spacing: -0.5px;
+    @include mq(lg) {
+        font-size: min(1.830161054vw, 25px);
+    
+    }
 }
 
