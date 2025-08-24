@@ -141,9 +141,13 @@ background: url(../img/reason03.webp) no-repeat center center / cover;
 
 .p-reason__features {
     display: flex;
+    flex-direction: column;
     gap: 5px;
     justify-content: center;
     margin-block-start: 46px;
+    @include mq(lg) {
+      flex-direction: row;
+    }
 }
 
 .p-reason__feature--third {
@@ -151,15 +155,22 @@ background: url(../img/reason03.webp) no-repeat center center / cover;
 }
 
 .p-reason__feature {
+    inline-size: fit-content;
+    margin-inline: auto;
 }
 
 .p-reason__feature--second:nth-child(2),
 .p-reason__feature--second:nth-child(4) {
-    margin-block-start: 70px;
+
+    @include mq(lg) {
+        margin-block-start: 70px;
+    }
 }
 
 .p-reason__feature--second:nth-child(n+2) {
-    margin-inline-start: -20px;
+    @include mq(lg) {
+        margin-inline-start: -20px;
+    }
 }
 
 .p-reason__feature-text {
