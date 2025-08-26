@@ -1,6 +1,7 @@
 @use "../global" as *;
 
 .p-merit {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
     background-color: $color-background-merit;
     padding-block: min(3.73352855vw, 51px) min(5.12445095vw, 70px);
     inline-size: min(1366px, 100%);
@@ -21,10 +22,35 @@
 }
 
 .p-merit__title {
+    position: relative;
     color: $color-bk;
-    font-size: min(2.19619327vw, 30px);
     font-weight: 700;
-    line-height: min(2.92825769vw, 40px);
+    font-size: rclamp(16, 30, 320, 1366);
+    line-height: 133.333%;
+    @include mq(lg) {
+      font-size: min(2.19619327vw, 30px);
+      line-height: min(2.92825769vw, 40px);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: rclamp(20, 31, 320, 1366);
+      height: rclamp(20, 31, 320, 1366);
+      top: 8px;
+      left: -10%;
+      background: url(../img/cta-left.webp) no-repeat center center / cover;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: rclamp(20, 31, 320, 1366);
+      height: rclamp(20, 31, 320, 1366);
+      top: 8px;
+      right: -10%;
+      background: url(../img/cta-right.webp) no-repeat center center / cover;
+    }
 }
 
 .p-merit__title--strong {
@@ -32,10 +58,16 @@
     transform: skew(-10deg);
     color: $color-rd;
     font-family: $font-sub;
-    font-size: min(4.39238653vw, 60px);
     font-weight: 600;
-    line-height: min(2.19619327vw, 30px);
     letter-spacing: -1.2px;
+    font-size: rclamp(40, 60, 320, 1366);
+    line-height: 50%;
+
+    @include mq(lg) {
+      font-size: min(4.39238653vw, 60px);
+      line-height: min(2.19619327vw, 30px);
+
+    }
 }
 
 .p-merit__title--dot {
@@ -43,53 +75,68 @@
 }
 
 .p-merit__list {
-    margin-block-start: min(1.75695461vw, 24px);
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    @include mq(lg) {
-      flex-direction: row;
-
+  margin-block-start: rclamp(18, 24, 320, 1366);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: rclamp(16, 18, 320, 1366);
+  @include mq(lg) {
+      margin-block-start: min(1.75695461vw, 24px);
+      gap: 18px;
+      display: flex;
     }
 }
 
 .p-merit__item {
     position: relative;
-    z-index: 10;
-    inline-size: min(19.7657vw, 270px);
+    // z-index: 10;
     background-color: $color-heading;
+    box-shadow: -10px 10px $color-rd;
     border-radius: 10px;
     padding-block: min(2.92825769vw, 40px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: min(1.75695461vw, 24px);
 
-    &::after {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      inline-size: 100%;
-      block-size: 100%;
-      border-radius: 10px;
-      inset-inline-start: -10px;
-      inset-block-start: 10px;
-      background-color: $color-rd;
+    
+    @include mq(lg) {
+      gap: min(1.75695461vw, 24px);
+      inline-size: min(19.7657vw, 270px);
     }
+
 }
 
 .p-merit__subtitle {
+    position: relative;
     color: $color-wt;
-    font-size: min(1.83016105vw, 25px);
     font-weight: 700;
     line-height: 100%;
+    font-size: rclamp(18, 25, 320, 1366);
+
+    @include mq(lg) {
+      font-size: min(1.83016105vw, 25px);
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: rclamp(16, 20, 320, 1366);
+      height: rclamp(16, 20, 320, 1366);
+      top: rclamp(5, 0, 320, 1366);
+      left: rclamp(-20, -30, 320, 1366);
+      background: url(../img/check-red.svg) no-repeat center center / cover;
+    }
 }
 
 .p-merit__description {
     text-align: center;
     color: $color-wt;
-    font-size: min(1.09809663vw, 15px);
     font-weight: 500;
-    line-height: min(1.83016105vw, 25px);
+    font-size: rclamp(12, 15, 320, 1366);
+    line-height: 166.667%;
+    margin-block-start: min(1.68374817vw, 23px);
+
+    @include mq(lg) {
+      font-size: min(1.09809663vw, 15px);
+      line-height: min(1.83016105vw, 25px);
+    }
 }
 

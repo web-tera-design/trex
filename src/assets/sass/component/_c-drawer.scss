@@ -3,8 +3,8 @@
 .c-drawer-icon {
     position: fixed;
     z-index: 102;
-    top: 16px;
-    right: 24px;
+    top: 36px;
+    right: 36px;
     width: 24px;
     height: 10px;
     display: flex;
@@ -50,25 +50,7 @@
         font-weight: 500;
         line-height: 150%; /* 18px */
     }
-
-    // .c-drawer-icon__text {
-    //     display: block;
-    //     position: relative;
-    //     top: 0;
-    //     right: 0;
-    //     z-index: 200;
-    // }
 }
-
-//   .c-drawer-icon__text {
-//     color: #0A2647;
-//     font-size: 12px;
-//     font-weight: 500;
-//     line-height: 150%; /* 18px */
-//     display: none;
-//   }
-
-
 
 .c-drawer-overlay {
   position: fixed;
@@ -85,18 +67,15 @@
   pointer-events: auto;
 }
 
-
-
-
 .c-drawer {
     position: fixed;
     z-index: 101;
     top: 0;
     right: 0;
-    width: 235px;
+    width: 300px;
     height: 100vh;
     height: 100svh;
-    background: $color-wt;
+    background: $color-background-main;
     overflow-y: scroll;
     translate: 101%;
     transition: translate 0.5s ease;
@@ -122,13 +101,10 @@
 }
 
 .c-drawer__link {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    color: #205295;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 150%; /* 21px */
+  color: $color-bk;
+  font-size: min(1.09809663vw, 15px);
+  font-weight: 500;
+  line-height: 100%; /* 100% */
     transition: all 0.3s ease;
     @media (any-hover: hover) {
         &:hover {

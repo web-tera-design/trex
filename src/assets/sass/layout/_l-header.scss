@@ -1,10 +1,18 @@
 @use "../global" as *;
 
 .l-header {
-    padding-top: 20px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 50%;
+    translate: -50%;
+    inline-size: 100%;
+    background-color: $color-background-main;
+    padding-block-start: min(1.46412884vw, 20px);
     border: 1px solid $color-bk;
     margin-inline: auto;
     inline-size: min(840px, 100%);
+    box-shadow: 0 5px 10px #b2b2b2;
     @include mq(lg) {
         inline-size: min(1366px, 100%);
         margin-inline: auto;
@@ -13,26 +21,11 @@
 
 .l-header__inner {
     border-block: 1px solid $color-bk;
+    border-block-end: 0;
     @include mq(lg) {
-        inline-size: min(1326px, 100%);
-        // padding-inline: 20px;
+        inline-size: min(1366px, 100%);
+        padding-inline: 20px;
         margin-inline: auto;
-    }
-}
-
-.l-header__top-space {
-    // border-block: 1px solid $color-bk;
-    width: 100vw;
-    display: grid;
-    position: relative;
-    &::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 1px;
-        background: $color-bk;
-        top: 20px;
-        left: 0;
     }
 }
 
@@ -68,6 +61,13 @@
     padding: 13px 37px;
     border-inline-end: 1px solid $color-bk;
     position: relative;
+    transition: background-color 0.3s ease;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $color-rd;
+      }
+    }
     &::before {
         content: "";
         position: absolute;
@@ -112,10 +112,17 @@
 .l-header__link {
     block-size: 64px;
     display: block;
-    padding: 17px 30px 18px 30px;
+    padding: 17px min(2.19619327vw, 30px) 18px min(2.19619327vw, 30px);
     border-inline-start: 1px solid $color-bk;
-    font-size: rclamp(12, 15, 375, 1366);
+    font-size: min(1.09809663vw, 15px);
     position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $color-heading;
+        color: $color-wt;
+      }
+    }
 
 
 
@@ -140,7 +147,15 @@
     }
 }
 
-.l-header__link-text {
+.l-header__button {
+    background-color: $color-rd;
+}
 
+.l-header__link-text {
+    color: $color-wt;
+    font-size: min(1.09809663vw, 15px);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: min(0.87847731vw, 11.867px);
 }
 

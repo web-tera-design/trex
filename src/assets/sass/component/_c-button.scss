@@ -4,23 +4,35 @@
     border-radius: 10px;
     display: inline-block;
     position: relative;
+    top: 0;
+    left: 0;
     background-color: $color-rd;
-    inline-size: min(32.942898975vw, 450px);
+    border: 1px solid $color-bk;
+    box-shadow: -10px 10px 0 $color-heading;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: min(1.68374817vw, 23px) min(3.66032211vw, 50px) min(1.02489019vw, 14px);
- 
-        &::after {
-      position: absolute;
-      content: "";
-      top: 8px;
-      left: -8px;
-      width: 100%;
-      height: 100%;
-      background-color: $color-heading;
-      z-index: -1;
+    transition: all 0.3s ease;
+    inline-size: fit-content;
+    padding: 14px rclamp(30, 48, 320, 1366) 14px rclamp(30, 48, 320, 1366);
+    margin-inline: auto;
+    
+    @include mq(lg) {
+        padding-block: min(1.68374817vw, 23px) min(1.02489019vw, 14px);
+        inline-size: min(32.942898975vw, 450px);
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        top: 10px;
+        left: -10px;
+        box-shadow: 0 0 $color-heading;
+      }
+    }
+
+
+    &:focus {
+        outline: 1px solid $color-focus;
     }
 }
 
@@ -32,27 +44,64 @@
 }
 
 .c-button__heading {
+    position: relative;
     color: $color-wt;
     text-align: center;
-    font-size: min(1.31771596vw, 18px);
     font-weight: 700;
-    line-height: min(2.56222548vw, 35px);
+    font-size: rclamp(12, 18, 320, 1366);
+    line-height: 194.444%;
+    
+    @include mq(lg) {
+        font-size: min(1.31771596vw, 18px);
+        line-height: min(2.56222548vw, 35px);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -20px;
+      top: 50%;
+     transform: translateY(-50%);
+     width: 17px;
+      height: 17px;
+      background: url(../img/button-left.webp) no-repeat center center / cover;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 17px;
+      height: 17px;
+      background: url(../img/button-right.webp) no-repeat center center / cover;
+    }
 }
 
 .c-button__text {
     color: $color-wt;
-    font-size: min(2.19619327vw, 30px);
     font-weight: 700;
-    line-height: min(2.56222548vw, 35px);
     letter-spacing: -0.9px;
+    font-size: rclamp(16, 30, 320, 1366);
+    line-height: 116.67%;
+    
+    @include mq(lg) {
+        font-size: min(2.19619327vw, 30px);
+        line-height: min(2.56222548vw, 35px);
+      
+    }
 }
 
 .c-button__subtext {
-    color: #FFF;
-    font-family: "Noto Sans JP";
-    font-size: rclamp(10, 15, 320, 1366);
-    font-style: normal;
+    color: $color-wt;
     font-weight: 500;
-    line-height: rclamp(23, 35, 320, 1366);
+    font-size: rclamp(12, 15, 320, 1366);
+    line-height: 233%;
+
+    @include mq(lg) {
+        font-size: min(1.09809663vw, 15px);
+        line-height: min(2.56222548vw, 35px);
+    }
 }
 

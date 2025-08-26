@@ -1,5 +1,11 @@
 @use 'sass:map';   // mapモジュールをインポート
 
+// メディアクエリのmixin
+@mixin mq($breakpoint: sm) {
+  @media #{map.get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
 // ブレイクポイント
 // $breakpoints: (
 //   sp:  "screen and (max-width: 599px)",   // スマホ
@@ -15,12 +21,12 @@
 $breakpoints: (
   sm:  "screen and (min-width: 600px)",
   md:  "screen and (min-width: 768px)",
-  lg:  "screen and (min-width: 1000px)",
+  lg:  "screen and (min-width: 768px)",
   pc:  "screen and (min-width: 1200px)",
   xl:  "screen and (min-width: 1440px)",
   sm-down:  "screen and (max-width: 599px)",
   md-down:  "screen and (max-width: 767px)",
-  lg-down:  "screen and (max-width: 999px)",
+  lg-down:  "screen and (max-width: 767px)",
   pc-down:  "screen and (max-width: 1199px)",
   xl-down:  "screen and (max-width: 1439px)",
   ct:  "screen and (min-width: 500px)",
@@ -28,9 +34,4 @@ $breakpoints: (
   ct3:  "screen and (max-width: 374px)",
 );
 
-// メディアクエリのmixin
-@mixin mq($breakpoint: sm) {
-  @media #{map.get($breakpoints, $breakpoint)} {
-    @content;
-  }
-}
+

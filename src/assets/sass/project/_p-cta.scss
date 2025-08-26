@@ -1,11 +1,15 @@
 @use "../global" as *;
 
 .p-cta {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
 
+    inline-size: min(1366px, 100%);
+    margin-inline: auto;
 }
 
 .p-cta__inner {
     background-color: $color-wt;
+    padding-block: rclamp(48, 71, 320, 1366) rclamp(36, 52, 320, 1366);
     @include mq(lg) {
         inline-size: min(calc(1326px + 20px * 2), 100%);
         padding-inline: min(0.01464129vw, 20px);
@@ -15,6 +19,7 @@
 }
 
 .p-cta__inner--three {
+    padding-block: rclamp(32, 50, 320, 1366) rclamp(30, 44, 320, 1366);
     @include mq(lg) {
         inline-size: min(calc(1326px + 20px * 2), 100%);
         padding-inline: min(1.46412884vw, 20px);
@@ -31,10 +36,10 @@
     transform: skew(-10deg);
     color: $color-heading;
     text-align: center;
-    font-size: rclamp(20, 43, 320, 1366);
     font-weight: 700;
-    line-height: rclamp(22, 40, 320, 1366);
     letter-spacing: -1.29px;
+    font-size: rclamp(24, 43, 320, 1366);
+    line-height: 200%;
     @include mq(lg) {
       font-size: min(3.14787701vw, 43px);
       line-height: min(2.92825769vw, 40px);
@@ -42,11 +47,90 @@
 }
 
 .p-cta__title--dot {
-    margin-inline: -0.7em;
+  position: relative;
+
+  span {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+    left: 8px;
+    width: 8px;
+    height: 8px;
+    background-color: $color-rd;
+    border-radius: 100vmax;
+    }
+  }
+}
+
+.p-cta__title--dot1 {
+  position: relative;
+
+  span {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -5px;
+    left: 8px;
+    width: 8px;
+    height: 8px;
+    background-color: $color-rd;
+    border-radius: 100vmax;
+    }
+  }
+}
+
+.p-cta__title--dot2 {
+  position: relative;
+
+  span {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+    left: 14px;
+    width: 8px;
+    height: 8px;
+    background-color: $color-heading;
+    border-radius: 100vmax;
+    }
+  }
+}
+.p-cta__title--dot3 {
+  position: relative;
+
+  span {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: rclamp(-6, -10, 320, 1366);
+    left: rclamp(4, 11, 320, 1366);
+    width: rclamp(6, 8, 320, 1366);
+    height: rclamp(6, 8, 320, 1366);
+    background-color: $color-rd;
+    border-radius: 100vmax;
+    }
+  }
 }
 
 .p-cta__title--space {
     margin-inline: -0.7em;
+}
+.p-cta__title--space1 {
+    margin-inline-start: -0.6em;
+    margin-inline-end: -0.2em;
+}
+.p-cta__title--space2 {
+    margin-inline-start: -0.2em;
+    margin-inline-end: -0.6em;
+}
+.p-cta__title--space3 {
+    margin-inline-start: -0.1em;
+    margin-inline-end: -0.6em;
 }
 
 .p-cta__button-content {
@@ -70,21 +154,39 @@
     margin-inline: auto;
     color: $color-bk;
     font-weight: 500;
-    font-size: min(1.46412884vw, 20px);
-    line-height: min(2.56222548vw, 35px);
+    font-size: rclamp(15, 20, 320, 1366);
+    line-height: 175%;
+
+    @include mq(lg) {
+        font-size: min(1.46412884vw, 20px);
+        line-height: min(2.56222548vw, 35px);
+    }
 
     &::before {
       content: "";
       position: absolute;
+      top: rclamp(7, 10, 320, 1366);
+      left: rclamp(-20, -24, 320, 1366);
+      width: rclamp(12, 17, 320, 1366);
+      height: rclamp(12, 17, 320, 1366);
+      background: url(../img/cta-left.webp) no-repeat center center / cover;
     }
     &::after {
       content: "";
       position: absolute;
+      top: rclamp(7, 10, 320, 1366);
+      right: rclamp(-20, -24, 320, 1366);
+      width: rclamp(12, 17, 320, 1366);
+      height: rclamp(12, 17, 320, 1366);
+      background: url(../img/cta-right.webp) no-repeat center center / cover;
     }
 }
 
 .p-cta__button {
     margin-block-start: min(0.21961933vw, 3px);
+    inline-size: fit-content;
+    padding: 23px 50px 14px 50px;
+    margin-inline: auto;
 }
 
 .p-cta__button-wrapper {
@@ -92,40 +194,70 @@
 }
 
 .p-cta__secondary__note {
-    margin-block-start: min(1.46412884vw, 20px);
-    text-align: center;
-    color: $color-bk;
-    font-size: min(1.09809663vw, 15px);
-    font-weight: 500;
-    line-height: min(1.09809663vw, 15px);
+  margin-block-start: 20px;
+  text-align: center;
+  color: $color-bk;
+  font-weight: 500;
+  font-size: rclamp(12, 15, 320, 1366);
+  line-height: 100%;
+  
+  @include mq(lg) {
+      margin-block-start: min(1.46412884vw, 20px);
+      font-size: min(1.09809663vw, 15px);
+      line-height: min(1.09809663vw, 15px);
+    }
 }
 
 .p-cta__secondary__assurance {
+  color: $color-bk;
+  text-align: center;
+  font-weight: 700;
+  margin-block-start: rclamp(14, 24, 320, 1366);
+  font-size: rclamp(14, 20, 320, 1366);
+  line-height: 200%;
+  @include mq(lg) {
     margin-block-start: min(1.75695461vw, 24px);
-    color: $color-bk;
-    text-align: center;
-    font-size: min(1.46412884vw,20px);
-    font-weight: 700;
-    line-height: min(2.92825769vw, 40px);
+      font-size: min(1.46412884vw,20px);
+      line-height: min(2.92825769vw, 40px);
+  }
 }
 
 .p-cta__assurances {
-    inline-size: min(32.942898975vw, 450px);
-    margin-block-start: min(2.04978038vw, 28px);
-    margin-inline: auto;
-}
+  inline-size: fit-content;
+  margin-inline: auto;
+  margin-block-start: rclamp(18, 28, 320, 1366);
+  @include mq(lg) {
+      inline-size: min(32.942898975vw, 450px);
+      margin-block-start: min(2.04978038vw, 28px);
+    }
+  }
 
 .p-cta__assurance {
     display: flex;
-    justify-content: space-between;
+    gap: min(5.12445095vw, 70px);
     align-items: center;
 
 }
 
 .p-cta__assurance-text {
+    position: relative;
+    position: relative;
     color: $color-bk;
-    font-size: min(1.09809663vw, 15px);
     font-weight: 700;
-    line-height: min(1.83016105vw, 25px);
-}
+    font-size: rclamp(12, 15, 320, 1366);
+    line-height: 171.069%;
+    @include mq(lg) {
+      font-size: min(1.09809663vw, 15px);
+      line-height: min(1.83016105vw, 25px);
+    }
 
+    &::before {
+      content: '';
+      position: absolute;
+      inline-size: min(1.24450952vw, 17px);
+      block-size: min(1.24450952vw, 17px);
+      top: 6px;
+      left: -20px;
+      background: url(../img/check-clue.svg) no-repeat center center / cover;
+    }
+}

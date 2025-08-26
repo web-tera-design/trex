@@ -31,15 +31,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sawarabi+Mincho&display=swap" rel="stylesheet" />
 
     <!-- CSS読み込み -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?v=1.0.21" />
-    <link rel="stylesheet" href="./assets/css/style.css?v=1.0.21" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?v=1.0.24" />
+    <link rel="stylesheet" href="./assets/css/style.css?v=1.0.24" />
 
     <!-- jQuery CDN（最新版、Google Hosted） -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?v=1.0.21" defer></script>
-    <script src="./assets/js/script.js?v=1.0.21" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?v=1.0.24" defer></script>
+    <script src="./assets/js/script.js?v=1.0.24" defer></script>
   </head>
 
   <body>
@@ -47,23 +47,25 @@
       <div class="l-header__inner l-section__inner--narrow">
         <div class="l-header__wrapper">
           <div class="l-header__logo">
-            <img src="assets/img/trex-logo.svg" alt="TREXロゴ" width="79" height="24" />
+            <a href="/" class="">
+              <img src="assets/img/trex-logo.svg" alt="TREXロゴ" width="79" height="24" />
+            </a>
           </div>
           <nav class="l-header__nav" aria-label="サイトメニュー">
             <ul class="l-header__list">
               <li class="l-header__item">
-                <a href="" class="l-header__link">選ばれる理由</a>
+                <a href="#reason" class="l-header__link">選ばれる理由</a>
               </li>
               <li class="l-header__item">
-                <a href="" class="l-header__link">先輩たちの声</a>
+                <a href="#voice" class="l-header__link">先輩たちの声</a>
               </li>
               <li class="l-header__item">
-                <a href="" class="l-header__link">FAQ</a>
+                <a href="#faq" class="l-header__link">FAQ</a>
               </li>
               <li>
-                <button class="l-header__link" aria-haspopup="true" aria-expanded="false">
+                <a href="#contact" class="l-header__link l-header__button">
                   <span class="l-header__link-text">無料キャリア相談はこちら</span>
-                </button>
+                </a>
               </li>
             </ul>
           </nav>
@@ -80,47 +82,42 @@
       <div class="c-drawer__content">
         <ul class="c-drawer__list">
           <li class="c-drawer__item">
-            <a href="#" class="c-drawer__link">
-              WORKS
-              <span class="c-drawer__text">仕事内容</span>
+            <a href="#reason" class="c-drawer__link">
+              <span class="c-drawer__text">選ばれる理由</span>
             </a>
           </li>
           <li class="c-drawer__item">
-            <a href="#" class="c-drawer__link">
-              INTERVIEW
-              <span class="c-drawer__text">社員の声</span>
+            <a href="#voice" class="c-drawer__link">
+              <span class="c-drawer__text">先輩たちの声</span>
             </a>
           </li>
           <li class="c-drawer__item">
-            <a href="#" class="c-drawer__link">
-              FLOW
-              <span class="c-drawer__text">採用の流れ</span>
+            <a href="#faq" class="c-drawer__link">
+              <span class="c-drawer__text">FAQ</span>
             </a>
           </li>
           <li class="c-drawer__item">
-            <a href="#" class="c-drawer__link">
-              FAQ
-              <span class="c-drawer__text">よくあるご質問</span>
+            <a href="#contact" class="c-button p-mv__drawer-button">
+              <div class="c-button__wrapper">
+                <span class="c-button__text">無料キャリア相談はこちら</span>
+                <span class="c-button__subtext">完全無料・オンライン対応可能</span>
+              </div>
             </a>
           </li>
         </ul>
-        <a href="#" class="c-drawer__button" aria-label="お問い合わせボタン">
-          <svg width="55" height="12" viewBox="0 0 55 12" fill="currentColor">
-            <path
-              d="M7.88594 10.7734V12H1.8625V10.7734H7.88594ZM2.16719 0.625V12H0.659374V0.625H2.16719ZM7.08906 5.51562V6.74219H1.8625V5.51562H7.08906ZM7.80781 0.625V1.85938H1.8625V0.625H7.80781ZM20.1031 0.625V12H18.5875L12.8609 3.22656V12H11.3531V0.625H12.8609L18.6109 9.42188V0.625H20.1031ZM28.3438 0.625V12H26.8594V0.625H28.3438ZM32 0.625V1.85938H23.2109V0.625H32ZM35.2875 0.625H39.0531C39.9073 0.625 40.6286 0.755208 41.2172 1.01562C41.8109 1.27604 42.2615 1.66146 42.5687 2.17188C42.8812 2.67708 43.0375 3.29948 43.0375 4.03906C43.0375 4.5599 42.9307 5.03646 42.7172 5.46875C42.5089 5.89583 42.2068 6.26042 41.8109 6.5625C41.4203 6.85938 40.9516 7.08073 40.4047 7.22656L39.9828 7.39062H36.4437L36.4281 6.16406H39.1C39.6417 6.16406 40.0922 6.07031 40.4516 5.88281C40.8109 5.6901 41.0818 5.43229 41.2641 5.10938C41.4464 4.78646 41.5375 4.42969 41.5375 4.03906C41.5375 3.60156 41.4516 3.21875 41.2797 2.89062C41.1078 2.5625 40.837 2.3099 40.4672 2.13281C40.1026 1.95052 39.6312 1.85938 39.0531 1.85938H36.7953V12H35.2875V0.625ZM41.9359 12L39.1703 6.84375L40.7406 6.83594L43.5453 11.9062V12H41.9359ZM46.8953 0.625L49.8484 6.33594L52.8094 0.625H54.5203L50.5984 7.75V12H49.0906V7.75L45.1687 0.625H46.8953Z"
-              fill="currentColor"
-            />
-          </svg>
-          <span>エントリーする</span>
-        </a>
       </div>
     </div>
 
     <section class="p-mv">
       <div class="p-mv__inner l-section__inner--narrow">
+        <p class="p-mv__copyright">© 2025 TREX Inc. All Rights Reserved.</p>
+        <!-- <div class="p-mv__scrolldown"> -->
+        <p class="p-mv__scrolldown-text">SCROLL</p>
+        <div class="p-mv__scrolldown-bar"></div>
+        <!-- </div> -->
         <div class="p-mv__cta">
           <div class="p-mv__button-container">
-            <a href="#" class="c-button p-mv__button">
+            <a href="#contact" class="c-button p-mv__button">
               <div class="c-button__wrapper">
                 <span class="c-button__heading">20代未経験歓迎</span>
                 <span class="c-button__text">無料キャリア相談はこちら</span>
@@ -159,7 +156,11 @@
           </div>
           <div class="p-mv__content-message-wrapper">
             <h2 class="p-mv__content-message">
-              あなたの「やる気」を、
+              あなたの
+              <span class="p-cta__title--space1">「</span>
+              <span class="p-cta__title--dot1">やる気</span>
+              <span class="p-cta__title--space3">」</span>
+              を、
               <br />
               未来を切り拓く力に変えませんか？
             </h2>
@@ -169,7 +170,11 @@
       <div class="p-mv__results">
         <div class="p-mv__results__heading">
           <h2 class="p-mv__results__title">実績</h2>
-          <p class="p-mv__results-subtitle">20代のキャリアを 最大化する実績</p>
+          <p class="p-mv__results-subtitle">
+            20代のキャリアを
+            <br />
+            最大化する実績
+          </p>
         </div>
         <div class="p-mv__results__inner l-section__inner--narrow">
           <ul class="p-mv__results__items">
@@ -195,11 +200,8 @@
             </li>
             <li class="p-mv__results__item">
               <span class="p-mv__results__item-wrapper">
-                <span class="p-mv__results__item-heading">
-                  平均
-                  <br />
-                  年収アップ
-                </span>
+                <span class="p-mv__results__item-heading u-mt20">平均</span>
+                <span class="p-mv__results__item-heading u-mt10">年収アップ</span>
                 <span class="p-mv__results__item-desc-wrapper">
                   <span class="p-mv__results__item-description">120</span>
                   <span class="p-mv__results__item-sub">万円</span>
@@ -211,7 +213,7 @@
       </div>
     </section>
 
-    <section class="p-reason">
+    <section id="reason" class="p-reason">
       <div class="p-reason__heading l-section__inner--narrow">
         <h2 class="p-reason__title">選ばれる理由</h2>
         <p class="p-reason__subtitle">株式会社TREXが選ばれる3つの理由</p>
@@ -296,7 +298,11 @@
           <li class="p-reason__card p-reason__card--three">
             <span class="p-reason__label"><span>03</span></span>
             <div class="p-reason__card-wrapper">
-              <h3 class="p-reason__card-title">「提案・企画営業」で、あなたの市場価値を飛躍的に高める！</h3>
+              <h3 class="p-reason__card-title">
+                「提案・企画営業」で、
+                <br class="u-br--sm-down" />
+                あなたの市場価値を飛躍的に高める！
+              </h3>
               <p class="p-reason__card-description">単なるモノ売りではなく、課題解決型の高度な営業スキルが身に付く職種を厳選。</p>
               <ul class="p-reason__features p-reason__feature--third">
                 <li class="p-reason__feature">
@@ -335,7 +341,11 @@
                 </li>
               </ul>
               <div class="p-reason__skills">
-                <p class="p-reason__skills-list">論理的思考力・プレゼン能力・課題解決能力・顧客開拓力</p>
+                <p class="p-reason__skills-list">
+                  論理的思考力・プレゼン能力・
+                  <br class="u-br--sm-down" />
+                  課題解決能力・顧客開拓力
+                </p>
                 <p class="p-reason__skills-note">どんな業界でも通用する「市場価値の高いスキル」を20代で習得</p>
               </div>
             </div>
@@ -349,14 +359,17 @@
         <div class="p-cta__heading">
           <h2 class="p-cta__title">
             あなたの
-            <span class="p-cta__title--dot">「やってみたい」</span>
+            <br class="u-br--lg-down" />
+            <span class="p-cta__title--space1">「</span>
+            <span class="p-cta__title--dot">やってみたい</span>
+            <span class="p-cta__title--space2">」</span>
             という気持ちを、
             <span class="p-cta__title--space">全力で応援します!</span>
           </h2>
         </div>
         <div class="p-cta__button-content">
           <p class="p-cta__message">まずは無料相談してみる</p>
-          <a href="#" class="c-button p-cta__button">
+          <a href="#contact" class="c-button p-cta__button">
             <div class="c-button__wrapper p-cta__button-wrapper">
               <span class="c-button__text">無料キャリア相談はこちら</span>
               <span class="c-button__subtext">完全無料・オンライン対応可能</span>
@@ -378,7 +391,7 @@
                   <br />
                   特別な経験やスキルがないと不安な方
                 </p>
-                <p class="p-message__description">
+                <p class="p-message__description p-message__description--1">
                   企画や提案でお客様の課題を解決し、
                   <br />
                   喜んでもらいたい意欲がある方
@@ -390,12 +403,12 @@
             </div>
             <div class="p-message__item-wrapper">
               <div class="p-message__item p-message__item--two">
-                <p class="p-message__description p-message__description--two">
+                <p class="p-message__description p-message__description--two p-message__description--2">
                   毎日同じルーティンワークではなく、
                   <br />
                   変化と刺激のある仕事に挑戦したい方
                 </p>
-                <p class="p-message__description p-message__description--two">
+                <p class="p-message__description p-message__description--two p-message__description--3">
                   20代のうちに、専門的なスキルを身につけ、
                   <br />
                   市場価値の高い人材になりたい方
@@ -407,12 +420,12 @@
             </div>
             <div class="p-message__item-wrapper">
               <div class="p-message__item p-message__item--three">
-                <p class="p-message__description">
+                <p class="p-message__description p-message__description--4">
                   自分のアイデアを活かして、
                   <br />
                   仕事の成果や会社の成長に貢献したい方
                 </p>
-                <p class="p-message__description">
+                <p class="p-message__description p-message__description--5">
                   「このままじゃいけない」と感じていて、
                   <br />
                   キャリアを真剣に変えたいと考えている方
@@ -427,7 +440,7 @@
       </div>
     </section>
 
-    <section class="p-voice">
+    <section id="voice" class="p-voice">
       <div class="p-voice__heading">
         <h2 class="p-voice__title">先輩たちの声</h2>
         <p class="p-voice__subtitle">株式会社TREXを通じて活躍する先輩たちの声</p>
@@ -435,15 +448,17 @@
       <div class="p-voice__wrapper l-section__inner--narrow">
         <ul class="p-voice__list">
           <li class="p-voice__item">
-            <div class="p-voice__item-heading">
-              <h3 class="p-voice__item-title">
-                事務職から未経験で
-                <br />
-                広告企画営業へ！
-              </h3>
+            <div class="p-voice__item-body">
+              <div class="p-voice__item-heading">
+                <h3 class="p-voice__item-title">
+                  事務職から未経験で
+                  <br class="u-hidden--md" />
+                  広告企画営業へ！
+                </h3>
+              </div>
+              <p class="p-voice__item-description">TREXの担当者さんが私の『話を聞く力』を強みだと見抜いてくれました。今では自分のアイデアが街中で見られる喜びを感じています。毎日が充実！</p>
+              <p class="p-voice__item-job">広告企画営業（24歳・女性）</p>
             </div>
-            <p class="p-voice__item-description">TREXの担当者さんが私の『話を聞く力』を強みだと見抜いてくれました。今では自分のアイデアが街中で見られる喜びを感じています。毎日が充実！</p>
-            <p class="p-voice__item-job">広告企画営業（24歳・女性）</p>
             <ul class="p-voice__item-labels">
               <li class="p-voice__item-label">
                 <span class="p-voice__item-text">
@@ -462,15 +477,17 @@
             </ul>
           </li>
           <li class="p-voice__item">
-            <div class="p-voice__item-heading">
-              <h3 class="p-voice__item-title">
-                アパレル販売員から
-                <br />
-                人材営業へ！
-              </h3>
+            <div class="p-voice__item-body">
+              <div class="p-voice__item-heading">
+                <h3 class="p-voice__item-title">
+                  アパレル販売員から
+                  <br class="u-hidden--md" />
+                  人材営業へ！
+                </h3>
+              </div>
+              <p class="p-voice__item-description">『人とのコミュニケーション能力は営業に活かせる』と背中を押してくれました。企業と求職者の架け橋となる仕事に大きなやりがいを感じています。</p>
+              <p class="p-voice__item-job">人材営業（26歳・男性）</p>
             </div>
-            <p class="p-voice__item-description">『人とのコミュニケーション能力は営業に活かせる』と背中を押してくれました。企業と求職者の架け橋となる仕事に大きなやりがいを感じています。</p>
-            <p class="p-voice__item-job">人材営業（26歳・男性）</p>
             <ul class="p-voice__item-labels">
               <li class="p-voice__item-label">
                 <span class="p-voice__item-text">
@@ -489,15 +506,17 @@
             </ul>
           </li>
           <li class="p-voice__item">
-            <div class="p-voice__item-heading">
-              <h3 class="p-voice__item-title">
-                文系出身・未経験から
-                <br />
-                IT企画営業へ！
-              </h3>
+            <div class="p-voice__item-body">
+              <div class="p-voice__item-heading">
+                <h3 class="p-voice__item-title">
+                  文系出身・未経験から
+                  <br class="u-hidden--md" />
+                  IT企画営業へ！
+                </h3>
+              </div>
+              <p class="p-voice__item-description">入社後の充実した研修と、チームでのOJTのおかげで、お客様の課題をITで解決する面白さに夢中です。自分の提案が具体的な数字となって表れるのが楽しい！</p>
+              <p class="p-voice__item-job">IT企画営業（25歳・男性）</p>
             </div>
-            <p class="p-voice__item-description">入社後の充実した研修と、チームでのOJTのおかげで、お客様の課題をITで解決する面白さに夢中です。自分の提案が具体的な数字となって表れるのが楽しい！</p>
-            <p class="p-voice__item-job">IT企画営業（25歳・男性）</p>
             <ul class="p-voice__item-labels">
               <li class="p-voice__item-label">
                 <span class="p-voice__item-text">
@@ -516,15 +535,17 @@
             </ul>
           </li>
           <li class="p-voice__item">
-            <div class="p-voice__item-heading">
-              <h3 class="p-voice__item-title">
-                文系出身・未経験から
-                <br />
-                IT企画営業へ！
-              </h3>
+            <div class="p-voice__item-body">
+              <div class="p-voice__item-heading">
+                <h3 class="p-voice__item-title">
+                  文系出身・未経験から
+                  <br class="u-hidden--md" />
+                  IT企画営業へ！
+                </h3>
+              </div>
+              <p class="p-voice__item-description">入社後の充実した研修と、チームでのOJTのおかげで、お客様の課題をITで解決する面白さに夢中です。自分の提案が具体的な数字となって表れるのが楽しい！</p>
+              <p class="p-voice__item-job">IT企画営業（25歳・男性）</p>
             </div>
-            <p class="p-voice__item-description">入社後の充実した研修と、チームでのOJTのおかげで、お客様の課題をITで解決する面白さに夢中です。自分の提案が具体的な数字となって表れるのが楽しい！</p>
-            <p class="p-voice__item-job">IT企画営業（25歳・男性）</p>
             <ul class="p-voice__item-labels">
               <li class="p-voice__item-label">
                 <span class="p-voice__item-text">
@@ -533,7 +554,7 @@
                   万
                 </span>
               </li>
-              <li class="p-voice__item-label">
+              <li class="p-voice__item-label p-voice__item-label2">
                 <span class="p-voice__item-text">
                   転職期間：
                   <span class="p-voice__item-text--strong">2</span>
@@ -551,9 +572,10 @@
         <div class="p-cta__top-heading-wrapper">
           <h2 class="p-cta__top-heading">
             20代のキャリアを、
+            <br class="u-br--lg-down" />
             <span class="p-cta__top-heading--space">
               今すぐ
-              <span class="p-cta__top--dot">加速させませんか</span>
+              <span class="p-cta__title--dot2">加速させませんか</span>
               ？
             </span>
           </h2>
@@ -573,7 +595,7 @@
         </div>
         <div class="p-cta__button-content p-cta__button-content--three">
           <p class="p-cta__message">クリックして30秒で完了！</p>
-          <a href="#" class="c-button p-cta__button">
+          <a href="#contact" class="c-button p-cta__button">
             <div class="c-button__wrapper p-cta__button-wrapper">
               <span class="c-button__text">無料キャリア相談はこちら</span>
               <span class="c-button__subtext">完全無料・オンライン対応可能</span>
@@ -590,7 +612,7 @@
       </div>
     </section>
 
-    <section class="p-faq">
+    <section id="faq" class="p-faq">
       <div class="p-faq__heading">
         <h2 class="p-faq__title">FAQ</h2>
         <p class="p-faq__subtitle">よくある質問</p>
@@ -607,7 +629,7 @@
               あなたのポテンシャルと意欲を重視しますので、まずはお気軽にご相談ください。
             </dd>
           </div>
-          <div class="p-faq__item">
+          <div class="p-faq__item p-faq__item--one">
             <dt class="p-faq__question">どのような業界の求人がありますか？</dt>
             <dd class="p-faq__answer">
               主にIT・Web業界、広告業界、人材業界、コンサルティング業界など、成長市場の企業における「提案・企画営業」職をご紹介しています。
@@ -615,7 +637,7 @@
               これらの業界は、未経験者でもチャレンジしやすく、かつ将来性の高いスキルが身につく職種が豊富です。
             </dd>
           </div>
-          <div class="p-faq__item">
+          <div class="p-faq__item p-faq__item--one">
             <dt class="p-faq__question">サービスは全て無料ですか？</dt>
             <dd class="p-faq__answer">
               はい、株式会社TREXのご利用は、求職者様にとって完全に無料です。ご相談から求人紹介、面接対策、入社後のフォローまで、
@@ -623,7 +645,7 @@
               一切費用はかかりません。私たちは企業様からの成功報酬で運営しておりますので、ご安心ください。
             </dd>
           </div>
-          <div class="p-faq__item">
+          <div class="p-faq__item p-faq__item--one">
             <dt class="p-faq__question">地方在住ですが、オンラインでの相談は可能ですか？</dt>
             <dd class="p-faq__answer">
               はい、可能です。弊社では、オンライン（ZoomやGoogle Meetなど）でのキャリア相談を積極的に行っております。
@@ -652,7 +674,7 @@
             今すぐ申し込む
             <span class="p-merit__title--strong">4</span>
             つの
-            <span class="p-merit__title--dot">メリット</span>
+            <span class="p-cta__title--dot3">メリット</span>
           </h2>
         </div>
         <ul class="p-merit__list">
@@ -695,7 +717,7 @@
         </div>
         <div class="p-cta__button-content">
           <p class="p-cta__message">クリックして30秒で完了！</p>
-          <a href="#" class="c-button p-cta__button">
+          <a href="#contact" class="c-button p-cta__button">
             <div class="c-button__wrapper p-cta__button-wrapper">
               <span class="c-button__text">無料キャリア相談はこちら</span>
               <span class="c-button__subtext">完全無料・オンライン対応可能</span>
@@ -707,73 +729,63 @@
       </div>
     </section>
 
-    <section class="p-contact">
+    <section id="contact" class="p-contact">
       <div class="p-contact__inner l-section__inner--narrow">
         <div class="p-contact__heading">
           <h2 class="p-contact__title">無料キャリア相談お申し込みフォーム</h2>
         </div>
-        <div class="p-contact__table-wrapper">
-          <form method="post" action="mail.php" class="p-contact__form">
-            <table class="p-contact__table">
-              <tr class="p-contact__row">
-                <th class="p-contact__label">
-                  お名前
-                  <span class="p-contact__required">※</span>
-                </th>
-                <td class="p-contact__field">
-                  <input size="20" type="text" name="お名前" class="p-contact__input" placeholder="お名前" />
-                </td>
-              </tr>
-              <tr class="p-contact__row">
-                <th class="p-contact__label">
-                  メールアドレス
-                  <span class="p-contact__required">※</span>
-                </th>
-                <td class="p-contact__field">
-                  <input size="30" type="text" name="Email" class="p-contact__input" placeholder="メールアドレス" />
-                </td>
-              </tr>
-              <tr class="p-contact__row">
-                <th class="p-contact__label">
-                  電話番号
-                  <span class="p-contact__required">※</span>
-                </th>
-                <td class="p-contact__field">
-                  <input size="30" type="text" name="電話番号" class="p-contact__input" placeholder="電話番号" />
-                </td>
-              </tr>
-              <tr class="p-contact__row">
-                <th class="p-contact__label">年齢</th>
-                <td class="p-contact__field">
-                  <input name="年齢" min="20" max="80" class="p-contact__input" placeholder="年齢" />
-                </td>
-              </tr>
-              <tr class="p-contact__row">
-                <th class="p-contact__label">希望面談方法</th>
-                <td class="p-contact__field">
-                  <select name="希望面談方法" class="p-contact__input">
-                    <option value="">選択してください</option>
-                    <option value="対面">対面</option>
-                    <option value="電話">電話</option>
-                    <option value="オンライン">オンライン</option>
-                  </select>
-                </td>
-              </tr>
-            </table>
-          </form>
-        </div>
-        <button type="submit" class="c-button p-cta__button">
-          <span class="c-button__wrapper p-cta__button-wrapper">
-            <span class="c-button__text">無料相談に申し込む</span>
-            <span class="c-button__subtext p-contact__button-subtext">送信する</span>
-          </span>
-        </button>
+        <form method="post" action="mail.php" class="p-contact__form">
+          <div class="p-contact__row p-contact__row--one">
+            <label class="p-contact__label">
+              お名前
+              <span class="p-contact__required">※</span>
+            </label>
+            <input size="20" type="text" name="お名前" class="p-contact__input" placeholder="お名前" />
+          </div>
+          <div class="p-contact__row">
+            <label class="p-contact__label">
+              メールアドレス
+              <span class="p-contact__required">※</span>
+            </label>
+            <input size="30" type="text" name="Email" class="p-contact__input" placeholder="メールアドレス" />
+          </div>
+          <div class="p-contact__row">
+            <label class="p-contact__label">
+              電話番号
+              <span class="p-contact__required">※</span>
+            </label>
+            <input size="30" type="text" name="電話番号" class="p-contact__input" placeholder="電話番号" />
+          </div>
+          <div class="p-contact__row--flex">
+            <div class="p-contact__row">
+              <label class="p-contact__label">年齢</label>
+              <input name="年齢" class="p-contact__input" placeholder="年齢" />
+            </div>
+            <div class="p-contact__row">
+              <label class="p-contact__label">希望面談方法</label>
+              <select name="希望面談方法" class="p-contact__input" onchange="changeColor(this)">
+                <option value="">選択してください</option>
+                <option value="対面">対面</option>
+                <option value="電話">電話</option>
+                <option value="オンライン">オンライン</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="c-button p-contact__button">
+            <span class="c-button__wrapper p-cta__button-wrapper">
+              <span class="c-button__text">無料相談に申し込む</span>
+              <span class="c-button__subtext p-contact__button-subtext">送信する</span>
+            </span>
+          </button>
+        </form>
       </div>
     </section>
     <footer class="l-footer">
       <div class="l-footer__left">
         <div class="l-footer__logo">
-          <img src="assets/img/trex-logo.svg" alt="" width="79" height="24" />
+          <a href="/" class="l-footer__logo-link">
+            <img src="assets/img/trex-logo.svg" alt="" width="79" height="24" />
+          </a>
         </div>
         <p class="l-footer__logo-subtitle">20代のキャリアを最大化する人材紹介会社</p>
       </div>
@@ -783,16 +795,16 @@
             <a href="/" class="l-footer__link">会社概要</a>
           </li>
           <li class="l-footer__item">
-            <a href="" class="l-footer__link">お問い合わせ</a>
+            <a href="#contact" class="l-footer__link">お問い合わせ</a>
           </li>
           <li class="l-footer__item">
-            <a href="" class="l-footer__link">プライバシーポリシー</a>
+            <a href="/" class="l-footer__link">プライバシーポリシー</a>
           </li>
           <li class="l-footer__item">
-            <a href="" class="l-footer__link">特定商取引法</a>
+            <a href="/" class="l-footer__link">特定商取引法</a>
           </li>
           <li class="l-footer__item">
-            <a href="" class="l-footer__link">利用規約</a>
+            <a href="/" class="l-footer__link">利用規約</a>
           </li>
         </ul>
       </nav>

@@ -1,38 +1,50 @@
 @use "../global" as *;
 
 .p-voice {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    inline-size: min(1366px, 100%);
+    margin-inline: auto;
+    background-color: $color-background-main;
+    margin-block-start: revert;
+    position: relative;
+    z-index: 2;
 
+    @include mq(lg) {
+        margin-block-start: min(-3.80673499vw, -52px);
+    }
 }
 
 .p-voice__heading {
         inline-size: min(1366px, 100%);
         margin-inline: auto;
         background-color: $color-heading;
-    padding-block: rclamp(25, 75, 320, 1366);
-
+        padding-block: min(5.49048316vw, 75px);
+        @include mq(lg) {
+        }
 }
 
 .p-voice__title {
     color: $color-wt;
     text-align: center;
-    font-size: rclamp(20, 40, 320, 1366);
     font-weight: 700;
-    line-height: rclamp(26, 54, 320, 1366);
-
+    font-size: rclamp(26, 40, 320, 1366);
+    line-height: 133.929%;
     @include mq(lg) {
-      font-size: min(2.928257686vw, 40px);
+        font-size: min(2.92825769vw, 40px);
+        line-height: min(3.95314788vw, 54px);
     }
 }
 
 .p-voice__subtitle {
     color: $color-wt;
     text-align: center;
-    font-size: rclamp(12, 20, 320, 1366);
     font-weight: 500;
-    line-height: rclamp(24, 40, 320, 1366);
-
+    font-size: rclamp(14, 20, 320, 1366);
+    line-height: 200%;
+    
     @include mq(lg) {
-      font-size: min(1.464128843vw, 20px);
+        font-size: min(1.46412884vw, 20px);
+        line-height: min(2.92825769vw, 40px);
     }
 }
 
@@ -46,26 +58,29 @@
 }
 
 .p-voice__list {
-    padding-block: rclamp(30, 53, 320, 1366) rclamp(50, 101, 320, 1366);
+    padding-block: min(3.87994143vw, 53px) min(7.39385066vw, 101px);
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(304px, 1fr));
     
     @include mq(lg) {
-        grid-template-columns: repeat(4, 1fr);
-      padding-block: min(3.879941434vw, 53px) min(7.393850658vw, 101px);
+      grid-template-columns: repeat(4, 1fr);
       gap: min(0.732064421vw, 10px);
     }
 }
 
 .p-voice__item {
-    padding: rclamp(16, 32, 320, 1366) rclamp(10, 20, 320, 1366) rclamp(14, 29, 320, 1366) rclamp(10, 20, 320, 1366);
+    padding: min(2.34260615vw, 32px) min(1.46412884vw, 20px) min(2.12298682vw, 29px) min(1.46412884vw, 20px);
     background-color: $color-background-card;
+    border: 1px solid $color-bk;
     
     @include mq(lg) {
         inline-size: min(22.254758418vw, 304px);
-      padding: min(2.342606149vw, 32px) min(1.464128843vw, 20px) min(2.122986822vw, 29px) min(1.464128843vw, 20px);
     }
+}
+
+.p-voice__item-body {
+    padding-inline: min(1.02489019vw, 14px);
 }
 
 .p-voice__item-heading {
@@ -73,64 +88,66 @@
 }
 
 .p-voice__item-title {
-    padding-bottom: rclamp(10, 17, 320, 1366);
+    padding-block-end: min(1.24450952vw, 17px);
     color: $color-bk;
-    font-size: rclamp(14, 22, 320, 1366);
     font-weight: 700;
-    line-height: rclamp(19, 30, 320, 1366);
-
+    font-size: rclamp(16, 22, 320, 1366);
+    line-height: 136.364%;
+    
     @include mq(lg) {
-        padding-bottom: min(1.244509516vw, 17px);
-        font-size: min(1.610541727vw, 22px);
+        font-size: min(1.61054173vw, 22px);
+        line-height: min(2.19619327vw, 30px);
     }
 }
 
 .p-voice__item-description {
-    padding-block-start: rclamp(10, 15, 320, 1366);
+    padding-block-start: min(1.09809663vw, 15px);
     border-block-start: 1px solid $color-bk;
     color: $color-bk;
-    font-size: rclamp(12, 15, 320, 1366);
     font-weight: 500;
-    line-height: rclamp(20, 25, 320, 1366);
+    letter-spacing: normal;
+    font-size: rclamp(12, 15, 320, 1366);
+    line-height: 166.667%;
+    
     @include mq(lg) {
-      padding-block-start: min(1.098096632vw, 15px);
-      font-size: min(1.098096632vw, 15px);
+        font-size: min(1.09809663vw, 15px);
+        line-height: min(1.83016105vw, 25px);
     }
 }
 
 .p-voice__item-job {
-    margin-block-start: rclamp(14, 21, 320, 1366);
     color: $color-bk;
+    margin-block-start: min(1.53733529vw, 21px);
     font-size: rclamp(10, 13, 320, 1366);
     font-weight: 700;
     line-height: 100%; /* 100% */
+    letter-spacing: normal;
+
     @include mq(lg) {
-      margin-block-start: min(1.537335285vw, 21px);
-      font-size: min(0.951683748vw, 13px);
+    font-size: min(0.95168375vw, 13px);
     }
 }
 
 .p-voice__item-labels {
     display: flex;
-    gap: 4px;
-    margin-block-start: rclamp(16, 30, 320, 1366);
+    gap: min(0.292825768vw, 4px);
+    margin-block-start: min(2.196193265vw, 30px);
 
     @include mq(lg) {
-        gap: min(0.292825768vw, 4px);
-        margin-block-start: min(2.196193265vw, 30px);
+
     }
 }
 
 .p-voice__item-label {
-    inline-size: 130px;
-    block-size: 48px;
+    inline-size: rclamp(100, 130, 320, 1366);
+    block-size: rclamp(32, 48, 320, 1366);
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: $color-rd;
     @include mq(lg) {
         inline-size: min(9.516837481vw, 130px);
-        block-size: min(3.513909224vw, 48px);  
+        block-size: min(3.513909224vw, 48px);
     }
     
 }
@@ -141,12 +158,12 @@
 .p-voice__item-text {
     color: $color-wt;
     text-align: center;
-    font-size: rclamp(10, 13, 320, 1366);
     font-weight: 500;
-    line-height: rclamp(20, 26, 320, 1366);
-
+    font-size: rclamp(10, 13, 320, 1366);
+    line-height: 200%;
     @include mq(lg) {
-      font-size: min(0.951683748vw, 13px);
+        font-size: min(0.951683748vw, 13px);
+        line-height: min(1.90336750vw, 26px);
     }
 }
 
@@ -154,13 +171,13 @@
     color: $color-wt;
     text-align: center;
     font-family: $font-sub;
-    font-size: rclamp(16, 25, 320, 1366);
     font-weight: 600;
-    line-height: rclamp(18, 28.5, 320, 1366);
     letter-spacing: -0.5px;
+    font-size: rclamp(16, 25, 320, 1366);
+    line-height: 114%;
     @include mq(lg) {
         font-size: min(1.830161054vw, 25px);
-    
+        line-height: min(2.04978038vw, 28.5px);
     }
 }
 

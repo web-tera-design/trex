@@ -116,3 +116,106 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+function adjustMarginTop() {
+  const header = document.querySelector(".l-header");
+  const target = document.querySelector(".p-mv");
+  if (header && target) {
+    const headerHeight = header.offsetHeight;
+    // ヘッダーは固定なので下げるのはp-mvだけ
+    target.style.marginTop = headerHeight + "px";
+    // ヘッダー自体は動かさない！
+  }
+}
+
+window.addEventListener("load", adjustMarginTop);
+window.addEventListener("resize", adjustMarginTop);
+
+const target = document.querySelector(".p-cta__title--dot");
+if (target) {
+  const text = target.textContent;
+  const wrappedText = text
+    .split("")
+    .map((char) => `<span>${char}</span>`)
+    .join("");
+  target.innerHTML = wrappedText;
+}
+
+const target1 = document.querySelector(".p-cta__title--dot1");
+if (target1) {
+  const text = target1.textContent;
+  const wrappedText = text
+    .split("")
+    .map((char) => `<span>${char}</span>`)
+    .join("");
+  target1.innerHTML = wrappedText;
+}
+
+const target2 = document.querySelector(".p-cta__title--dot2");
+if (target2) {
+  const text = target2.textContent;
+  const wrappedText = text
+    .split("")
+    .map((char) => `<span>${char}</span>`)
+    .join("");
+  target2.innerHTML = wrappedText;
+}
+const target3 = document.querySelector(".p-cta__title--dot3");
+if (target3) {
+  const text = target3.textContent;
+  const wrappedText = text
+    .split("")
+    .map((char) => `<span>${char}</span>`)
+    .join("");
+  target3.innerHTML = wrappedText;
+}
+
+function changeColor(hoge) {
+  if (hoge.value == 0) {
+    hoge.style.color = "#b4b4b4";
+  } else {
+    hoge.style.color = "#000";
+  }
+}
+
+function setMaxHeight(selector) {
+  const elements = document.querySelectorAll(selector);
+  let maxHeight = 0;
+  elements.forEach((el) => {
+    el.style.height = "auto";
+    let height = el.offsetHeight;
+    if (height > maxHeight) maxHeight = height;
+  });
+  elements.forEach((el) => (el.style.height = maxHeight + "px"));
+}
+
+window.addEventListener("load", () => setMaxHeight(".p-voice__item-title"));
+window.addEventListener("resize", () => setMaxHeight(".p-voice__item-title"));
+
+function alignHeightToMaxLineCount() {
+  const elements = document.querySelectorAll(".p-merit__description");
+  if (elements.length === 0) return;
+
+  // 行の高さ（line-height）を取得
+  const style = window.getComputedStyle(elements[0]);
+  const lineHeight = parseFloat(style.lineHeight);
+
+  // 各要素の行数を計算（高さ / 行高）
+  let maxLines = 0;
+  elements.forEach((el) => {
+    const height = el.offsetHeight;
+    const lines = Math.round(height / lineHeight);
+    if (lines > maxLines) {
+      maxLines = lines;
+    }
+  });
+
+  // 最も行数が多い要素に合わせて高さを設定
+  const targetHeight = maxLines * lineHeight;
+  elements.forEach((el) => {
+    el.style.height = targetHeight + "px";
+  });
+}
+
+// ページロード後など任意のタイミングで呼び出し
+alignHeightToMaxLineCount();

@@ -1,33 +1,63 @@
 @use "../global" as *;
 
 .l-footer {
-
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid $color-bk;
+    inline-size: min(1366px, 100%);
+    margin-inline: auto;
+    @include mq(lg) {
+        display: flex;
+    }
 }
 
 .l-footer__left {
-
+    padding-block: min(2.56222548vw, 35px);
+    background-color: $color-rd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include mq(lg) {
+        inline-size: min(37.18887262vw, 508px);
+        gap: min(0.51244510vw, 7px);
+    }
 }
 
 .l-footer__logo {
-
+    padding:4px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $color-background-main;
+      }
+    }
 }
 
 .l-footer__logo-subtitle {
-    color: #142E50;
-    text-align: center;
-    font-family: "Noto Sans JP";
-    font-size: 13px;
-    font-style: normal;
+    color: $color-heading;
+    font-size: rclamp(12, 13, 320, 1366);
     font-weight: 700;
-    line-height: 15px; /* 115.385% */
+    @include mq(lg) {      
+        font-size: min(0.95168375vw, 13px);
+        line-height: min(1.09809663vw, 15px);
+    }
 }
 
 .l-footer__nav {
-
+    @include mq(lg) {
+        inline-size: min(62.81112738vw, 858px);
+    }
 }
 
 .l-footer__list {
-
+    background-color: $color-heading;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: min(3.29428990vw, 45px);
+    padding-block: min(4.24597365vw, 58px);
+    flex-wrap: wrap;
 }
 
 .l-footer__item {
@@ -35,11 +65,26 @@
 }
 
 .l-footer__link {
-    color: #FFF;
-    font-family: "Noto Sans JP";
-    font-size: 15px;
-    font-style: normal;
+    color: $color-wt;
     font-weight: 500;
-    line-height: 15px; /* 100% */
+    transition: color 0.3s ease;
+    font-size: rclamp(12, 15, 320, 1366);
+    line-height: 100%;
+
+    svg {
+        display: inline-block;
+        width: 100%;
+    }
+
+    @include mq(sm) {
+        font-size: min(1.09809663vw, 15px);
+        line-height: min(1.09809663vw, 15px);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-rd;
+      }
+    }
 }
 

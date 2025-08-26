@@ -1,28 +1,35 @@
 @use "../global" as *;
 
 .p-contact {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
     inline-size: min(1366px, 100%);
     background-color: $color-background-main;
     margin-inline: auto;
-    padding-block: 90px 128px;
+    // padding-block: 90px 128px;
+    padding-block: min(6.58857980vw, 90px) min(9.37042460vw, 128px);
 }
 
 .p-contact__inner {
     inline-size: min(calc(950px + 20px * 2), 100%);
-    padding-inline: 20px;
+    padding-inline: min(1.46412884vw, 20px);
     margin-inline: auto;
 }
 
 .p-contact__heading {
     background-color: $color-heading;
-    color: $color-wt;
-    padding: 33px 220px;
+    padding-block: min(2.41581259vw, 33px);
     text-align: center;
-    font-size: rem(16);
 }
 
 .p-contact__title {
-
+    color: $color-wt;
+    font-weight: 700;
+    font-size: rclamp(20, 30, 320, 1366);
+    line-height: 178.571%;
+    @include mq(lg) {
+        font-size: min(2.19619327vw, 30px);
+        line-height: min(3.87994143vw, 53.571px);
+    }
 }
 
 .p-contact__table-wrapper {
@@ -30,9 +37,11 @@
 }
 
 .p-contact__form {
+    border: 1px solid $color-bk;
     background-color: $color-wt;
     padding-block: min(5.92972182vw, 81px) min(6.73499268vw, 92px);
     margin-inline: auto;
+    padding-inline: min(10.61493411vw, 145px);
 }
 
 
@@ -48,12 +57,24 @@
 .p-contact__row {
     display: flex;
     flex-direction: column;
-    inline-size: min(48.31625183vw, 660px);
+    inline-size: 100%;
     margin-inline: auto;
+    margin-block-start: min(2.19619327vw, 30px);
 }
 
-.p-contact__row-flex {
+.p-contact__row--one {
+    margin-block-start: 0;
+}
+
+.p-contact__row--flex {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include mq(lg) {
+      flex-direction: row;
+      gap: min(1.90336750vw, 26px);
+    }
 }
 
 
@@ -61,32 +82,75 @@
 .p-contact__label {
     text-align: left;
     color: $color-bk;
-    font-size: min(1.09809663vw, 15px);
     font-weight: 700;
-    line-height: min(1.09809663vw, 15px);
+    font-size: rclamp(12, 15, 320, 1366);
+    line-height: 100%;
+    @include mq(lg) {
+        font-size: min(1.09809663vw, 15px);
+        line-height: min(1.09809663vw, 15px);
+    }
 }
 
 .p-contact__required {
     color: $color-rd;
-    font-size: min(1.09809663vw, 15px);
     font-weight: 700;
-    line-height: min(1.09809663vw, 15px);
+    font-size: rclamp(12, 15, 320, 1366);
+    line-height: 100%;
+    @include mq(lg) {
+        font-size: min(1.09809663vw, 15px);
+        line-height: min(1.09809663vw, 15px);
+    }
 }
 
 .p-contact__field {
-    margin-block-start: min(0.65885798vw, 9px);
+    margin-block-start: 9px;
+    @include mq(lg) {
+        margin-block-start: min(0.65885798vw, 9px);
+    }
 }
 
 .p-contact__input {
+    margin-block-start: 9px;
+    padding-inline-start: 15px;
+    block-size: rclamp(36, 55, 320, 1366);
     border-radius: 10px;
     border: 1px solid $color-bk;
     background: $color-wt;
     inline-size: 100%;
-    block-size: min(4.02635432vw, 55px);
-    padding-inline-start: min(1.09809663vw, 15px);
+    -webkit-appearance: none; /* Chrome, Safari, Opera */
+    -moz-appearance: none;    /* Firefox */
+    appearance: none;         /* 標準 */
+    background: transparent;  /* 背景を透明に */
+    padding-right: 1em;       /* テキストとかぶらない余白 */
+    @include mq(lg) {
+        block-size: min(4.02635432vw, 55px);
+        padding-inline-start: min(1.09809663vw, 15px);
+        margin-block-start: min(0.65885798vw, 9px);
+    }
+
+}
+
+input.p-contact__input:focus,
+select.p-contact__input:focus {
+    outline: 1px solid $color-focus;
+}
+
+
+input::placeholder {
+    color: #b4b4b4;
+}
+
+select {
+    color: #b4b4b4;
 }
 
 .p-cta__button {
+    inline-size: fit-content;
+    margin-inline: auto;
+}
+
+.p-contact__button {
+    margin-block-start: min(4.39238653vw, 60px);
     inline-size: fit-content;
     margin-inline: auto;
 }
@@ -99,12 +163,4 @@
 
 }
 
-.p-contact__input:invalid {
-  color: #999 !important;
-}
-.p-contact__input option[value=""] {
-  color: #999 !important;
-}
-.p-contact__input option:not([value=""]) {
-  color: #999  !important;
-}
+

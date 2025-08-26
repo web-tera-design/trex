@@ -1,5 +1,10 @@
 @use "../global" as *;
 
+.p-cta__top {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+
+}
+
 .p-cta__top-wrapper {
     inline-size: min(1366px ,100%);
     margin-inline: auto;
@@ -19,10 +24,14 @@
     transform: skew(-10deg);
     text-align: center;
     font-family: $font-heading;
-    font-size: min(4.17276720vw, 57px);
     font-weight: 400;
-    line-height: min(2.92825769vw, 40px);
     letter-spacing: -1.71px;
+    font-size: rclamp(26, 57, 320, 1366);
+    line-height: 200%;
+    @include mq(lg) {
+        font-size: min(4.17276720vw, 57px);
+        line-height: min(2.92825769vw, 40px);
+    }
 }
 
 .p-cta__top-heading--space {
@@ -37,8 +46,12 @@
     margin-block-start: min(2.19619327vw, 30px);
     text-align: center;
     color: $color-wt;
-    font-size: min(1.83016105vw, 25px);
     font-weight: 500;
-    line-height: min(2.92825769vw, 40px);
+    font-size: rclamp(16, 25, 320, 1366);
+    line-height: 160%;
+    @include mq(lg) {
+        font-size: min(1.83016105vw, 25px);
+        line-height: min(2.92825769vw, 40px);
+    }
 }
 

@@ -1,10 +1,13 @@
 @use "../global" as *;
 
 .p-faq {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
     padding-block: min(6.36896047vw, 87px) min(7.90629575vw, 108px);
     inline-size: min(1366px, 100%);
     margin-inline: auto;
+    background-color: $color-background-main;
 }
+
 
 .p-faq__heading {
     padding-block: min(5.85651537vw, 80px);
@@ -17,20 +20,28 @@
 
 .p-faq__title {
     color: $color-wt;
-    font-size: min(2.92825769vw, 40px);
     font-weight: 700;
-    line-height: min(3.87994143vw, 53px);
+    font-size: rclamp(24, 40, 320, 1366);
+    line-height: 133.929%;
+    @include mq(lg) {
+        font-size: min(2.92825769vw, 40px);
+        line-height: min(3.87994143vw, 53px);
+    }
 }
 
 .p-faq__subtitle {
     color: $color-wt;
-    font-size: min(1.46412884vw, 20px);
     font-weight: 500;
-    line-height: min(2.92825769vw, 40px);
+    font-size: rclamp(14, 20, 320, 1366);
+    line-height: 200%;
+    @include mq(lg) {
+        font-size: min(1.46412884vw, 20px);
+        line-height: min(2.92825769vw, 40px);
+    }
 }
 
 .p-faq__inner {
-    inline-size: min(1125px, 100%);
+    padding-inline: min(8.78477306vw, 120px);
     margin-inline: auto;
 }
 
@@ -43,21 +54,76 @@
     padding-inline: min(7.90629575vw, 108px) min(2.70863836vw, 37px);
     background-color: $color-wt;
     border: 1px solid $color-bk;
+    &:nth-child(n+2) {
+        border-block-start: 0;
+    }
 
+}
+
+.p-faq__item--one {
+    padding-block-start: min(3.14787701vw, 43px);
 }
 
 .p-faq__question {
+    position: relative;
     color: $color-heading;
-    font-size: min(1.83016105vw, 25px);
     font-weight: 900;
-    line-height: min(2.92825769vw, 40);
+    font-size: rclamp(14, 25, 320, 1366);
+    line-height:160%;
+    @include mq(lg) {
+        font-size: min(1.83016105vw, 25px);
+        line-height: min(2.92825769vw, 40px);
+    }
+
+    &::before {
+        left: rclamp(-20, -52, 320, 1366);
+        top: rclamp(3, 6, 320, 1366);
+      content: 'Q.';
+      position: absolute;
+      transform: skew(-10deg);
+      color: $color-heading;
+        font-family: $font-sub;
+        font-weight: 600;
+        letter-spacing: -0.6px;
+        font-size: rclamp(20, 30, 320, 1366);
+        line-height: 95%;
+        @include mq(lg) {
+            font-size: min(2.19619327vw, 30px);
+            line-height: min(2.04978038vw, 28.5px);
+        }
+    }
 }
 
 .p-faq__answer {
+    margin-block-start: min(1.02489019vw, 14px);
+    position: relative;
     color: $color-bk;
-    font-size: min(1.09809663vw, 15px);
     font-weight: 500;
-    line-height: min(1.83016105vw, 25px);
     letter-spacing: normal;
+    font-size: rclamp(10, 15, 320, 1366);
+    line-height: 166.67%;
+
+    @include mq(lg) {
+        font-size: min(1.09809663vw, 15px);
+        line-height: min(1.83016105vw, 25px);
+
+    }
+    &::before {
+        left: rclamp(-20, -52, 320, 1366);
+        top: 0;
+      content: 'A.';
+      position: absolute;
+      transform: skew(-10deg);
+    color: $color-rd;
+    font-family: $font-sub;
+    font-weight: 600;
+    letter-spacing: -0.6px;
+    font-size: rclamp(20, 30, 320, 1366);
+    line-height: 95%;
+    @include mq(lg) {
+        font-size: min(2.19619327vw, 30px);
+        line-height: min(2.04978038vw, 28.5px);
+    }
+    }
 }
 
