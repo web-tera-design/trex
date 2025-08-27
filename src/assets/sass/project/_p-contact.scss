@@ -36,12 +36,16 @@
 
 }
 
-.p-contact__form {
+.p-contact__form-wrapper {
     border: 1px solid $color-bk;
     background-color: $color-wt;
     padding-block: min(5.92972182vw, 81px) min(6.73499268vw, 92px);
     margin-inline: auto;
     padding-inline: min(10.61493411vw, 145px);
+}
+
+.p-contact__form {
+
 }
 
 

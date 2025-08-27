@@ -7,8 +7,8 @@
     <!-- レスポンシブ -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ファビコン -->
-    <!-- <link rel="shortcut icon" href="/" type="image/x-icon" /> -->
+    <!-- ルート直下favicon.icoの指定例 -->
+    <link rel="icon" href="https://web-tera-design.com/trex/favicon.ico?v=2" type="image/x-icon" />
 
     <!-- SEO対策・検索非表示 -->
     <meta name="robots" content="noindex" />
@@ -19,11 +19,13 @@
     <!-- サイト概要 -->
     <meta name="description" content="20代未経験から提案・企画営業のプロを目指しませんか？新しい挑戦をサポートする無料キャリア相談を実施中。市場価値の高いスキルを身につけ、未来を切り拓く力に変えていきましょう。オンライン対応可能。" />
 
-    <!-- OGP設定（SNSシェア用） -->
-    <meta property="og:title" content="/" />
-    <meta property="og:description" content="/" />
-    <meta property="og:image" content="/" />
-    <meta property="og:url" content="/" />
+    <!-- OGP設定 -->
+    <meta property="og:title" content="20代が輝く場所へ｜未経験から提案・企画営業のプロへ【無料キャリア相談】" />
+    <meta property="og:description" content="20代未経験から提案・企画営業のプロを目指しませんか？新しい挑戦をサポートする無料キャリア相談を実施中。市場価値の高いスキルを身につけ、未来を切り拓く力に変えていきましょう。オンライン対応可能。" />
+    <meta property="og:image" content="https://web-tera-design.com/trex/assets/img/ogp-trex.png" />
+    <meta property="og:url" content="https://web-tera-design.com/trex/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="TREX Career" />
 
     <!-- フォント読み込み（※できるだけ先に） -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,18 +33,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sawarabi+Mincho&display=swap" rel="stylesheet" />
 
     <!-- CSS読み込み -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?v=1.0.25" />
-    <link rel="stylesheet" href="./assets/css/style.css?v=1.0.25" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?v=1.0.28" />
+    <link rel="stylesheet" href="./assets/css/style.css?v=1.0.28" />
 
     <!-- jQuery CDN（最新版、Google Hosted） -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?v=1.0.25" defer></script>
-    <script src="./assets/js/script.js?v=1.0.25" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?v=1.0.28" defer></script>
+    <script src="./assets/js/script.js?v=1.0.28" defer></script>
   </head>
 
-  <body>
+  <body id="top">
     <header class="l-header">
       <div class="l-header__inner l-section__inner--narrow">
         <div class="l-header__wrapper">
@@ -192,18 +194,18 @@
               <span class="p-mv__results__item-wrapper">
                 <span class="p-mv__results__item-heading">累計サポート</span>
                 <span class="p-mv__results__item-desc-wrapper">
-                  <span class="p-mv__results__item-description">1000</span>
+                  <span class="p-mv__results__item-description p-mv__results__item-description--two">1000</span>
                   <span class="p-mv__results__item-sub">名</span>
                 </span>
                 <span class="p-mv__results__item-third">以上</span>
               </span>
             </li>
             <li class="p-mv__results__item">
-              <span class="p-mv__results__item-wrapper">
+              <span class="p-mv__results__item-wrapper p-mv__results__item-wrapper--position">
                 <span class="p-mv__results__item-heading u-mt20">平均</span>
                 <span class="p-mv__results__item-heading u-mt10">年収アップ</span>
                 <span class="p-mv__results__item-desc-wrapper">
-                  <span class="p-mv__results__item-description">120</span>
+                  <span class="p-mv__results__item-description p-mv__results__item-description--two">120</span>
                   <span class="p-mv__results__item-sub">万円</span>
                 </span>
               </span>
@@ -256,14 +258,14 @@
           </li>
           <li class="p-reason__card p-reason__card--two">
             <span class="p-reason__label"><span>02</span></span>
-            <div class="p-reason__card-wrapper">
+            <div class="p-reason__card-wrapper p-reason__card-wrapper--two">
               <h3 class="p-reason__card-title">
                 あなたの「なりたい姿」を
                 <br />
                 徹底サポート！内定獲得まで伴走
               </h3>
               <p class="p-reason__card-description">経験豊富なキャリアアドバイザーが、あなたの個性や潜在的な強みを丁寧に引き出します。</p>
-              <ul class="p-reason__features">
+              <ul class="p-reason__features p-reason__features--two">
                 <li class="p-reason__feature p-reason__feature--second">
                   <span class="p-reason__feature-text">
                     徹底した
@@ -304,8 +306,8 @@
                 あなたの市場価値を飛躍的に高める！
               </h3>
               <p class="p-reason__card-description">単なるモノ売りではなく、課題解決型の高度な営業スキルが身に付く職種を厳選。</p>
-              <ul class="p-reason__features p-reason__feature--third">
-                <li class="p-reason__feature">
+              <ul class="p-reason__features">
+                <li class="p-reason__feature p-reason__feature--third">
                   <div class="p-reason__feature-texts">
                     <h4 class="p-reason__feature-thirdtext">広告企画営業</h4>
                     <p class="p-reason__feature-subtext">
@@ -315,7 +317,7 @@
                     </p>
                   </div>
                 </li>
-                <li class="p-reason__feature">
+                <li class="p-reason__feature p-reason__feature--third">
                   <div class="p-reason__feature-texts">
                     <h4 class="p-reason__feature-thirdtext">人材営業</h4>
                     <p class="p-reason__feature-subtext">
@@ -327,7 +329,7 @@
                     </p>
                   </div>
                 </li>
-                <li class="p-reason__feature">
+                <li class="p-reason__feature p-reason__feature--third">
                   <div class="p-reason__feature-texts">
                     <h4 class="p-reason__feature-thirdtext">IT企画営業</h4>
                     <p class="p-reason__feature-subtext">
@@ -398,7 +400,7 @@
                 </p>
               </div>
               <div class="p-message__image p-message__image--one">
-                <img src="assets/img/message01.webp" alt="男性" width="476" height="646" />
+                <img src="assets/img/message01.webp" alt="考える男性のイメージ写真" width="476" height="646" />
               </div>
             </div>
             <div class="p-message__item-wrapper">
@@ -415,7 +417,7 @@
                 </p>
               </div>
               <div class="p-message__image p-message__image--two">
-                <img src="assets/img/message02.webp" alt="" width="390" height="646" />
+                <img src="assets/img/message02.webp" alt="考える女性のイメージ写真" width="390" height="646" />
               </div>
             </div>
             <div class="p-message__item-wrapper">
@@ -432,7 +434,7 @@
                 </p>
               </div>
               <div class="p-message__image p-message__image--three">
-                <img src="assets/img/message03.webp" alt="" width="462" height="646" />
+                <img src="assets/img/message03.webp" alt="考え込む男性のイメージ写真" width="462" height="646" />
               </div>
             </div>
           </div>
@@ -730,45 +732,47 @@
     </section>
 
     <section id="contact" class="p-contact">
-      <div class="p-contact__inner l-section__inner--narrow">
+      <div class="p-contact__inner">
         <div class="p-contact__heading">
           <h2 class="p-contact__title">無料キャリア相談お申し込みフォーム</h2>
         </div>
         <form method="post" action="mail.php" class="p-contact__form">
-          <div class="p-contact__row p-contact__row--one">
-            <label class="p-contact__label">
-              お名前
-              <span class="p-contact__required">※</span>
-            </label>
-            <input size="20" type="text" name="お名前" class="p-contact__input" placeholder="お名前" />
-          </div>
-          <div class="p-contact__row">
-            <label class="p-contact__label">
-              メールアドレス
-              <span class="p-contact__required">※</span>
-            </label>
-            <input size="30" type="text" name="Email" class="p-contact__input" placeholder="メールアドレス" />
-          </div>
-          <div class="p-contact__row">
-            <label class="p-contact__label">
-              電話番号
-              <span class="p-contact__required">※</span>
-            </label>
-            <input size="30" type="text" name="電話番号" class="p-contact__input" placeholder="電話番号" />
-          </div>
-          <div class="p-contact__row--flex">
-            <div class="p-contact__row">
-              <label class="p-contact__label">年齢</label>
-              <input name="年齢" class="p-contact__input" placeholder="年齢" />
+          <div class="p-contact__form-wrapper l-section__inner--narrow">
+            <div class="p-contact__row p-contact__row--one">
+              <label class="p-contact__label">
+                お名前
+                <span class="p-contact__required">※</span>
+              </label>
+              <input size="20" type="text" name="お名前" class="p-contact__input" placeholder="お名前" />
             </div>
             <div class="p-contact__row">
-              <label class="p-contact__label">希望面談方法</label>
-              <select name="希望面談方法" class="p-contact__input" onchange="changeColor(this)">
-                <option value="">選択してください</option>
-                <option value="対面">対面</option>
-                <option value="電話">電話</option>
-                <option value="オンライン">オンライン</option>
-              </select>
+              <label class="p-contact__label">
+                メールアドレス
+                <span class="p-contact__required">※</span>
+              </label>
+              <input size="30" type="text" name="Email" class="p-contact__input" placeholder="メールアドレス" />
+            </div>
+            <div class="p-contact__row">
+              <label class="p-contact__label">
+                電話番号
+                <span class="p-contact__required">※</span>
+              </label>
+              <input size="30" type="text" name="電話番号" class="p-contact__input" placeholder="電話番号" />
+            </div>
+            <div class="p-contact__row--flex">
+              <div class="p-contact__row">
+                <label for="age" class="p-contact__label">年齢</label>
+                <input id="age" name="年齢" class="p-contact__input" placeholder="年齢" />
+              </div>
+              <div class="p-contact__row">
+                <label for="interview-method" class="p-contact__label">希望面談方法</label>
+                <select id="interview-method" name="希望面談方法" class="p-contact__input" onchange="changeColor(this)">
+                  <option value="">選択してください</option>
+                  <option value="対面">対面</option>
+                  <option value="電話">電話</option>
+                  <option value="オンライン">オンライン</option>
+                </select>
+              </div>
             </div>
           </div>
           <button type="submit" class="c-button p-contact__button">
@@ -783,8 +787,8 @@
     <footer class="l-footer">
       <div class="l-footer__left">
         <div class="l-footer__logo">
-          <a href="/" class="l-footer__logo-link">
-            <img src="assets/img/trex-logo.svg" alt="" width="79" height="24" />
+          <a href="#top" class="l-footer__logo-link">
+            <img src="assets/img/trex-logo.svg" alt="trexトップページへ" width="79" height="24" />
           </a>
         </div>
         <p class="l-footer__logo-subtitle">20代のキャリアを最大化する人材紹介会社</p>

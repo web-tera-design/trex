@@ -14,6 +14,7 @@
     align-items: center;
     background-color: $color-heading;
     padding-block: min(5.49048316vw, 75px);
+    padding-block: 75px 75px;
 
     @include mq(lg) {
     inline-size: min(calc(1326px + 20px * 2), 100%);
@@ -38,6 +39,7 @@
     font-weight: 500;
     font-size: rclamp(15, 20, 320, 1366);
     line-height: 267.857%;
+    margin-block-start: min(-0.73206442vw, -10px);
     
     @include mq(lg) {
         font-size: min(1.46412884vw, 20px);
@@ -47,7 +49,7 @@
 
 .p-reason__inner {
     padding-block: min(4.75841874vw, 65px) min(5.49048316vw, 75px);
-    padding-inline: 20px;
+    // padding-inline: 0;
     @include mq(lg) {
         inline-size: min(calc(1120px + 20px * 2), 100%);
         padding-inline: min(1.46412884vw, 20px);
@@ -74,8 +76,8 @@
 
 .p-reason__card {
     position: relative;
-    max-inline-size: 600px;
     margin-inline: auto;
+    inline-size: 100%;
     &::after {
       content: '';
       position: absolute;
@@ -95,7 +97,6 @@ background: url(../img/reason01.webp) no-repeat center center / cover;
 
 .p-reason__card--two {
 background: url(../img/reason02.webp) no-repeat center center / cover;
-
 }
 
 .p-reason__card--three {
@@ -135,11 +136,18 @@ background: url(../img/reason03.webp) no-repeat center center / cover;
 .p-reason__card-wrapper {
     position: relative;
     z-index: 2;
-    padding: 31px 34px;
+    padding: 31px rclamp(10, 34, 320, 1366);
 
     @include mq(lg) {
-        padding-block: min(2.26939971vw, 31px);
+        padding-block: min(2.26939971vw, 31px) min(4.38596491vw, 50px);
         padding-inline: min(2.48901903vw, 34px);
+    }
+}
+
+.p-reason__card-wrapper--two {
+
+    @include mq(lg-down) {
+        // padding-block-end: 40%;
     }
 }
 
@@ -179,7 +187,7 @@ background: url(../img/reason03.webp) no-repeat center center / cover;
 
 .p-reason__features {
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 5px;
@@ -193,30 +201,56 @@ background: url(../img/reason03.webp) no-repeat center center / cover;
     }
 }
 
-.p-reason__feature--third {
-    @include mq(lg) {
-        margin-block-start: min(1.75695461vw, 24px);
-    }
-    // margin-block-start: 24px;
+.p-reason__features--two {
+    // position: relative;
+
+@include mq(lg-down) {
+//   top: -20px;
 }
+}
+
 
 .p-reason__feature {
 
 }
 
-.p-reason__feature--second:nth-child(2),
-.p-reason__feature--second:nth-child(4) {
-
-    @include mq(lg) {
-        margin-block-start: min(5.12445095vw, 70px);
-        // margin-block-start: 70px;
+.p-reason__feature--second {
+    
+        &:nth-child(even) {
+            margin-top: 30px;
+        }
+        &:nth-child(odd) {
+                margin-top: -30px;
+        }
+        &:nth-child(n+2) {
+            margin-inline-start: -10px;
+        }
+    @include mq(lg-down) {
+        &:nth-child(even) {
+            margin-top: rclamp(70, 120, 320, 1366);
+        }
+        &:nth-child(odd) {
+                margin-top: rclamp(-70, -120, 320, 1366);
+        }
+        &:nth-child(n+2) {
+            margin-inline-start: -30px;
+        }
     }
 }
 
-.p-reason__feature--second:nth-child(n+2) {
-    @include mq(lg) {
-        margin-inline-start: min(-1.46412884vw, -20px);
-        // margin-inline-start: -20px;
+.p-reason__feature--third {
+    
+
+    @include mq(sm-down) {
+        &:nth-child(odd) {
+            margin-top: rclamp(-110, -130, 320, 1366);
+        }
+        &:nth-child(even) {
+            margin-top: rclamp(110, 130, 320, 1366);
+        }
+        &:nth-child(n+2) {
+            margin-inline-start: -60px;
+        }
     }
 }
 
@@ -229,10 +263,11 @@ background: url(../img/reason03.webp) no-repeat center center / cover;
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 30px;
-    inline-size: 250px;
-    block-size: 250px;
+    inline-size: rclamp(80, 250, 320, 1366);
+    block-size: rclamp(80, 250, 320, 1366);
+    font-size: rclamp(10, 20, 320, 1366);
+    line-height: 150%;
+
 
     @include mq(lg) {
         font-size: min(1.09809663vw, 15px);
@@ -250,8 +285,8 @@ background: url(../img/reason03.webp) no-repeat center center / cover;
     justify-content: center;
     align-items: center;
     gap: 16px;
-    inline-size: 200px;
-    block-size: 200px;
+    inline-size: rclamp(120, 200, 320, 1366);
+    block-size: rclamp(120, 200, 320, 1366);
     @include mq(lg) {
         gap: min(1.17130307vw, 16px);
         inline-size: min(14.64128843vw, 200px);
@@ -262,8 +297,8 @@ background: url(../img/reason03.webp) no-repeat center center / cover;
 .p-reason__feature-thirdtext {
     color: $color-wt;
     font-weight: 700;
-    font-size: 18px;
-    line-height: 20px;
+    font-size: rclamp(12, 18, 320, 1366);
+    line-height: 111.11%;
 
     @include mq(lg) {
         font-size: min(1.31771596vw, 18px);
@@ -275,8 +310,8 @@ background: url(../img/reason03.webp) no-repeat center center / cover;
     text-align: center;
     color: $color-wt;
     font-weight: 500;
-    font-size: 15px;
-    line-height: 25px;
+    font-size: rclamp(10, 15, 320, 1366);
+    line-height: 166.667%;
     @include mq(lg) {
         font-size: min(1.09809663vw, 15px);
         line-height: min(1.83016105vw, 25px);

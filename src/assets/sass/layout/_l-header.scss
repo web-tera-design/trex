@@ -55,10 +55,11 @@
 
 .l-header__logo {
     inline-size: 153px;
-    block-size: 64px;
+    // block-size: 64px;
     display: flex;
     align-items: center;
-    padding: 13px 37px;
+    padding-inline: 37px;
+    padding-block: 13px;
     border-inline-end: 1px solid $color-bk;
     position: relative;
     transition: background-color 0.3s ease;
@@ -110,9 +111,11 @@
 
 
 .l-header__link {
-    block-size: 64px;
+    // block-size: 64px;
     display: block;
-    padding: 17px min(2.19619327vw, 30px) 18px min(2.19619327vw, 30px);
+    padding-block: 13px 13px;
+    padding-inline: 29px;
+    // padding: 17px min(2.19619327vw, 30px) 18px min(2.19619327vw, 30px);
     border-inline-start: 1px solid $color-bk;
     font-size: min(1.09809663vw, 15px);
     position: relative;

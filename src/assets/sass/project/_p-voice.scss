@@ -93,6 +93,7 @@
     font-weight: 700;
     font-size: rclamp(16, 22, 320, 1366);
     line-height: 136.364%;
+    flex-wrap: wrap;
     
     @include mq(lg) {
         font-size: min(1.61054173vw, 22px);

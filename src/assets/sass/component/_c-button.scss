@@ -19,7 +19,6 @@
     margin-inline: auto;
     
     @include mq(lg) {
-        padding-block: min(1.68374817vw, 23px) min(1.02489019vw, 14px);
         inline-size: min(32.942898975vw, 450px);
     }
     @media (any-hover: hover) {
