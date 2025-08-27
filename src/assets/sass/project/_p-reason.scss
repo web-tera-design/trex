@@ -15,7 +15,7 @@
     background-color: $color-heading;
     padding-block: min(5.49048316vw, 75px);
 
-    @include mq(sm) {
+    @include mq(lg) {
     inline-size: min(calc(1326px + 20px * 2), 100%);
     padding-inline: min(1.46412884vw, 20px);
     margin-inline: auto;
@@ -27,7 +27,7 @@
     font-weight: 700;
     font-size: rclamp(30, 40, 320, 1366);
     line-height: 133.929%;
-    @include mq(sm) {
+    @include mq(lg) {
         font-size: min(2.92825769vw, 40px);
         line-height: min(3.87994143vw, 53px);
     }
@@ -39,7 +39,7 @@
     font-size: rclamp(15, 20, 320, 1366);
     line-height: 267.857%;
     
-    @include mq(sm) {
+    @include mq(lg) {
         font-size: min(1.46412884vw, 20px);
         line-height: min(3.87994143vw, 53px);
     }
@@ -48,7 +48,7 @@
 .p-reason__inner {
     padding-block: min(4.75841874vw, 65px) min(5.49048316vw, 75px);
     padding-inline: 20px;
-    @include mq(sm) {
+    @include mq(lg) {
         inline-size: min(calc(1120px + 20px * 2), 100%);
         padding-inline: min(1.46412884vw, 20px);
         margin-inline: auto;
@@ -64,7 +64,7 @@
     flex-direction: column;
     margin-inline: auto;
     gap: 20px;
-    @include mq(sm) {
+    @include mq(lg) {
         display: grid;
         gap: min(0.73206442vw, 10px);
       grid-template-columns: calc(558 / 1120 * 100%) calc(558 / 1120 * 100%);
@@ -74,6 +74,8 @@
 
 .p-reason__card {
     position: relative;
+    max-inline-size: 600px;
+    margin-inline: auto;
     &::after {
       content: '';
       position: absolute;
@@ -82,6 +84,7 @@
       z-index: 1;
     }
     @include mq(lg) {
+        inline-size: revert;
     //   inline-size: calc(558 / 1366 * 100%);
     }
 }
@@ -118,7 +121,7 @@ background: url(../img/reason03.webp) no-repeat center center / cover;
     font-size: rclamp(14, 23, 320, 1366);
     line-height: 123.913%;
     
-    @include mq(sm) {
+    @include mq(lg) {
         padding: min(1.09809663vw, 15px) min(0.87847731vw, 12px);
         font-size: min(1.68374817vw, 23px);
         line-height: min(2.04978038vw, 28.5px);
@@ -134,7 +137,7 @@ background: url(../img/reason03.webp) no-repeat center center / cover;
     z-index: 2;
     padding: 31px 34px;
 
-    @include mq(sm) {
+    @include mq(lg) {
         padding-block: min(2.26939971vw, 31px);
         padding-inline: min(2.48901903vw, 34px);
     }
@@ -149,7 +152,7 @@ background: url(../img/reason03.webp) no-repeat center center / cover;
     line-height: 140%;
     padding-block-end: 24px;
     
-    @include mq(sm) {
+    @include mq(lg) {
         padding-block-end: min(1.75695461vw, 24px);
         font-size: min(1.83016105vw, 25px);
         line-height: min(2.56222548vw, 35px);
@@ -165,7 +168,7 @@ background: url(../img/reason03.webp) no-repeat center center / cover;
     line-height: 166.667%;
     text-align: center;
     
-    @include mq(sm) {
+    @include mq(lg) {
         text-align: left;
         margin-block-start: min(1.02489019vw, 14px);
         font-size: min(1.09809663vw, 15px);
@@ -182,7 +185,7 @@ background: url(../img/reason03.webp) no-repeat center center / cover;
     gap: 5px;
     margin-block-start: 46px;
 
-    @include mq(sm) {
+    @include mq(lg) {
         align-items: revert;
         flex-direction: row;
         gap: min(0.36603221vw, 5px);
@@ -204,7 +207,7 @@ background: url(../img/reason03.webp) no-repeat center center / cover;
 .p-reason__feature--second:nth-child(2),
 .p-reason__feature--second:nth-child(4) {
 
-    @include mq(sm) {
+    @include mq(lg) {
         margin-block-start: min(5.12445095vw, 70px);
         // margin-block-start: 70px;
     }
@@ -231,7 +234,7 @@ background: url(../img/reason03.webp) no-repeat center center / cover;
     inline-size: 250px;
     block-size: 250px;
 
-    @include mq(sm) {
+    @include mq(lg) {
         font-size: min(1.09809663vw, 15px);
         line-height: min(1.46412884vw, 20px);
         inline-size: min(9.51683748vw, 130px);
@@ -249,7 +252,7 @@ background: url(../img/reason03.webp) no-repeat center center / cover;
     gap: 16px;
     inline-size: 200px;
     block-size: 200px;
-    @include mq(sm) {
+    @include mq(lg) {
         gap: min(1.17130307vw, 16px);
         inline-size: min(14.64128843vw, 200px);
         block-size: min(14.64128843vw, 200px);
@@ -262,7 +265,7 @@ background: url(../img/reason03.webp) no-repeat center center / cover;
     font-size: 18px;
     line-height: 20px;
 
-    @include mq(sm) {
+    @include mq(lg) {
         font-size: min(1.31771596vw, 18px);
         line-height: min(1.46412884vw, 20px);
     }
@@ -274,7 +277,7 @@ background: url(../img/reason03.webp) no-repeat center center / cover;
     font-weight: 500;
     font-size: 15px;
     line-height: 25px;
-    @include mq(sm) {
+    @include mq(lg) {
         font-size: min(1.09809663vw, 15px);
         line-height: min(1.83016105vw, 25px);
     }
@@ -287,7 +290,7 @@ background: url(../img/reason03.webp) no-repeat center center / cover;
     justify-content: center;
     align-items: center;
 
-    @include mq(sm) {
+    @include mq(lg) {
         margin-block-start: min(1.02489019vw, 14px);
     }
 }
@@ -298,7 +301,7 @@ background: url(../img/reason03.webp) no-repeat center center / cover;
     font-weight: 700;
     font-size: rclamp(15, 20, 320, 1366);
     line-height: 200%;
-    @include mq(sm) {
+    @include mq(lg) {
         text-align: left;
         font-size: min(1.46412884vw, 20px);
         line-height: min(2.92825769vw, 40px);
@@ -313,7 +316,7 @@ background: url(../img/reason03.webp) no-repeat center center / cover;
     font-size: rclamp(12, 15, 320, 1366);
     line-height: 133.3333%;
 
-    @include mq(sm) {
+    @include mq(lg) {
         margin-block-start: 0;
         text-align: left;
         font-size: min(1.09809663vw, 15px);
