@@ -1,8 +1,9 @@
 @use "../global" as *;
 
 .p-mv {
-    border: 1px solid $color-bk;
+    // border: 1px solid $color-bk;
     border-block-start: 0;
+    margin-block-start: 50px;
     margin-inline: auto;
     inline-size: min(840px, 100%);
     background-color: $color-background-main;
@@ -13,7 +14,7 @@
     }
 
     @include mq(lg) {
-        inline-size: min(1366px, 100%);
+        inline-size: min(1200px, 100%);
     }
 }
 
@@ -23,11 +24,11 @@
 
     @include mq(lg) {
         inline-size: min(1366px, 100%);
-        padding-inline: 20px;
+        // padding-inline: 20px;
         margin-inline: auto;
-        display: flex;
-        flex-direction: row-reverse;
-        border-block-start: 0;
+        // display: flex;
+        // flex-direction: row-reverse;
+        // border-block-start: 0;
     }
 }
 
@@ -106,14 +107,15 @@
 .p-mv__cta {
 
     inline-size: 100%;
-    border-inline-start: 1px solid $color-heading;
-    border-inline-end: 1px solid $color-heading;
-    background: url(../img/mv-image.webp) no-repeat center center / cover;
-    aspect-ratio: 582 / 581;
+    // border-inline-start: 1px solid $color-heading;
+    // border-inline-end: 1px solid $color-heading;
+    background: url(../img/mv-image.webp) no-repeat center 3% / cover;
+    aspect-ratio: 1200 / 630;
+    background-size: 120%;
     position: relative;
     @include mq(lg) {
         border-inline-end: 0;
-        inline-size: calc(582 / 1326 * 100%);
+        // inline-size: calc(582 / 1326 * 100%);
     }
 }
 
@@ -139,9 +141,9 @@
 .p-mv__content-wrapper {
 
     inline-size: 100%;
-    border-inline-end: 1px solid $color-heading;
-    border-inline-start: 1px solid $color-heading;
-    padding-block: min(1.31771596vw, 18px);
+    // border-inline-end: 1px solid $color-heading;
+    // border-inline-start: 1px solid $color-heading;
+    // padding-block: min(1.31771596vw, 18px);
     @include mq(lg) {
         border-inline-end: 0;
         inline-size: min(54.465592972vw, 744px);
@@ -149,7 +151,7 @@
 }
 
 .p-mv__content-wrapper--wrap2 {
-    border-block-end: 1px solid $color-heading;
+    // border-block-end: 1px solid $color-heading;
 }
 
 .p-mv__content {
@@ -158,34 +160,59 @@
 }
 
 .p-mv__heading-wrapper {
-    transform: skew(-10deg);
-    margin-inline-start: min(0.36603221vw, 5px);
+    inline-size: 100%;
+      position: relative;
+  display: inline-block; /* テキスト幅に合わせたい場合 */
+  margin-block-start: 100px;
+padding: 20px;
+  font-weight: 700;
+  z-index: 1;
+  margin-inline: auto;
+    text-align: center;
+    // margin-inline-start: min(0.36603221vw, 5px);
+    &::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* 親要素いっぱい */
+    background: rgba(255, 255, 255, 0.01); /* 半透明の白 */
+    backdrop-filter: blur(4px) saturate(150%);
+    -webkit-backdrop-filter: blur(4px) saturate(150%); /* Safari対応 */
+    border-radius: 8px; /* 角丸 */
+    border: 1px solid rgba(255, 255, 255, 0.01); /* 薄い枠線でガラス感UP */
+    z-index: -1; /* 背景に置く */
+    }
 }
 
 .p-mv__heading {
+    transform: skew(-10deg);
+
     text-align: center;
     padding-inline: min(0.73206442vw, 10px);
     color: $color-heading;
+    color: #fff;
     font-family: $font-heading;
     letter-spacing: -2.8px;
     white-space: nowrap;
     overflow: visible;
-    font-size: rclamp(50, 140, 320, 1366);
+    font-size: rclamp(50, 130, 320, 1366);
     line-height: 98.51%;
+    padding-inline-start: 60px;
 
-    @include mq(lg) {
-        text-align: left;
-        font-size: min(10.248901903vw, 140px);
-        line-height: min(10.10248902vw, 138px);
-    }
+
+
+    // @include mq(lg) {
+    //     text-align: left;
+    //     font-size: min(10.248901903vw, 140px);
+    //     line-height: min(10.10248902vw, 138px);
+    // }
 }
 
 .p-mv__heading--space {
-    margin-inline-start: 18%;
+    margin-inline-start: -0.2em;
 
-    @include mq(lg) {
-      margin-inline-start: 0;
-    }
+    // @include mq(lg) {
+    //   margin-inline-start: 0;
+    // }
 }
 
 .p-mv__heading--space1 {
@@ -197,6 +224,8 @@
 }
 
 .p-mv__subtitle {
+    // inline-size: fit-content;
+    
     color: $color-wt;
     font-weight: 700;
     background-color: $color-heading;
@@ -209,7 +238,7 @@
     margin-block-start: 5px;
 
     @include mq(lg) {
-      margin-inline: revert;
+    //   margin-inline: revert;
       padding: min(0.58565154vw, 8px) min(0.87847731vw, 12px);
       inline-size: min(50.21961933vw, 686px);
       font-size: min(1.97657394vw, 27px);
@@ -235,17 +264,80 @@
 }
 
 .p-mv__content-message-wrapper {
-    transform: skew(-10deg);
-    padding-block-start: rclamp(15, 20, 320, 1366);
-    padding-inline: min(2.12298682vw, 29px);
-    
-    @include mq(lg) {
-        padding-block-start: min(1.464128843vw, 20px);
+    padding: 20px;
+    // padding-block-start: rclamp(15, 20, 320, 1366);
+    // padding-inline: min(2.12298682vw, 29px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    block-size: auto;
+
+        &::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* 親要素いっぱい */
+    background: rgba(255, 255, 255, 0.01); /* 半透明の白 */
+    backdrop-filter: blur(8px) saturate(150%);
+    -webkit-backdrop-filter: blur(8px) saturate(150%); /* Safari対応 */
+    // border-radius: 8px; /* 角丸 */
+    border: 1px solid rgba(255, 255, 255, 0.01); /* 薄い枠線でガラス感UP */
+    z-index: -1; /* 背景に置く */
     }
+    // @include mq(lg) {
+    //     padding-block-start: min(1.464128843vw, 20px);
+    // }
 }
 
+.p-mv__content-message-wrapper {
+  /* レイヤー制御の土台づくり */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-block-end: 100px;
+
+  /* 中身の余白。必要ならrclampに戻してOK */
+  padding: 20px;
+
+  /* ぼかしのはみ出し防止＆-1の安全運用 */
+  overflow: hidden;          /* 角丸からblurがはみ出さない */
+//   border-radius: 12px;       /* ガラスの角丸は親に持たせる */
+  isolation: isolate;        /* スタッキング文脈を作る（z-index:-1が安全に） */
+  z-index: 0;                /* ::beforeより上にテキストを置くための基準 */
+
+  /* iOSのホームバーにめり込まないようにしておくと親切 */
+  padding-bottom: max(20px, env(safe-area-inset-bottom));
+
+  /* 背景ガラス（擬似要素） */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;             /* テキストより背面に */
+    background: rgba(255, 255, 255, 0.01); /* ほんのり白。濃いなら0.15〜0.2 */
+    backdrop-filter: blur(4px) saturate(140%);
+    -webkit-backdrop-filter: blur(4px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    /* 角丸は親と揃える（ぼかし縁のズレ防止） */
+    border-radius: inherit;
+    pointer-events: none;     /* クリックを邪魔しない */
+  }
+
+  /* フォールバック（backdrop-filterが無い環境向け）*/
+  @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    &::before {
+      background: rgba(20, 20, 20, 0.55); /* ぼかせない代わりに暗め半透明で読ませる */
+      border-color: rgba(255, 255, 255, 0.18);
+    }
+  }
+}
+
+
 .p-mv__content-message {
-    color: #142E50;
+    transform: skew(-10deg);
+
+    color: #fff;
     font-size: rclamp(20, 40, 320, 1366);
     font-weight: 700;
     line-height: rclamp(24, 45, 320, 1366);/* 112.5% */
@@ -253,13 +345,14 @@
     @include mq(lg) {
       font-size: min(2.929257686vw, 40px);
       padding-inline: 29px;
+      padding-inline-start: 86px;
     }
 }
 
 .p-mv__results {
     display: flex;
     flex-direction: column;
-    border-block-start: 1px solid $color-heading;
+    // border-block-start: 1px solid $color-heading;
     // inline-size: min(840px, 100%);
     @include mq(sm) {
         flex-direction: row;
